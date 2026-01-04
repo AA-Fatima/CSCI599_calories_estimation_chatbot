@@ -1,0 +1,65 @@
+<div class="landing">
+  <div class="logo">
+    <img alt="logo" src="../../../assets/logo.svg" />
+  </div>
+  <div class="hero">
+    <div class="background">
+      <div class="msg1">How many calories in fajita with 200g chicken and no fries?</div>
+      <div class="msg2">560 kcal</div>
+    </div>
+
+    <div class="hero-content w-75">
+      <h1>Arabic Food Calorie Estimation</h1>
+      <p class="subtitle">
+        AI-Powered Nutritional Analysis for Middle Eastern Cuisine.<br />
+        Discover the calories in your favorite Arabic dishes with our intelligent chatbot.
+      </p>
+      <div class="selection-card">
+        <h2>Select Your Country</h2>
+        <div class="country-selector" *ngIf="!loading">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Select Country</mat-label>
+            <input type="text" matInput [(ngModel)]="selectedCountry" [matAutocomplete]="auto" />
+
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let country of filteredCountries" [value]="country">
+                {{ country }}
+              </mat-option>
+
+            </mat-autocomplete>
+          </mat-form-field>
+        </div>
+
+        <div class="loading-spinner" *ngIf="loading">
+          <p>Loading countries...</p>
+        </div>
+
+        <button class="btn btn-primary btn-large" (click)="startChat()" [disabled]="!selectedCountry || loading">
+          Get Started
+          <span class="arrow">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="features">
+    <h2>Why Use Our Calculator?</h2>
+    <div class="features-grid">
+      <div class="feature-card" *ngFor="let feature of features">
+        <span class="feature-icon">{{ feature.icon }}</span>
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="examples">
+    <h2>Try Asking...</h2>
+    <div class="example-queries">
+      <div class="example">"How many calories in shawarma?"</div>
+      <div class="example">"Kushari without rice"</div>
+      <div class="example">"كم سعرة في الفلافل؟"</div>
+      <div class="example">"7ommos calories"</div>
+    </div>
+  </div>
+</div>

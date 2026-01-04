@@ -1,0 +1,106 @@
+<div class="modal-overlay" *ngIf="isOpen" (click)="onClose()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h2>{{ dish ?  'Edit Dish' : 'Add New Dish' }}</h2>
+      <button class="close-btn" (click)="onClose()">✕</button>
+    </div>
+
+    <div class="modal-body">
+      <!-- Dish Name -->
+      <div class="form-group">
+        <label>Dish Name</label>
+        <input 
+          type="text" 
+          [(ngModel)]="editedDish.dish_name" 
+          placeholder="e.g., Chicken Shawarma Sandwich"
+          class="form-input">
+      </div>
+
+      <!-- Country -->
+      <div class="form-group">
+        <label>Country</label>
+        <input 
+          type="text" 
+          [(ngModel)]="editedDish.country" 
+          placeholder="e.g., Lebanon"
+          class="form-input">
+      </div>
+
+      <!-- Ingredients List -->
+      <div class="ingredients-section">
+        <h3>Ingredients ({{ editedDish.ingredients.length }})</h3>
+        
+        <div class="ingredients-list">
+          <div *ngFor="let ing of editedDish.ingredients; let i = index" class="ingredient-row">
+            <div class="ingredient-info">
+              <strong>{{ ing.name }}</strong>
+              <div class="ingredient-nutrition">
+                <input 
+                  type="number" 
+                  [value]="ing.weight_g" 
+                  (change)="updateIngredientWeight(ing, +$any($event.target).value)"
+                  class="weight-input">g
+                = {{ ing.calories }}cal (C:{{ ing.carbs }}g P:{{ ing.protein }}g F:{{ ing.fat }}g)
+              </div>
+            </div>
+            <button class="btn-remove" (click)="removeIngredient(i)">x</button>
+          </div>
+        </div>
+
+        <!-- Totals -->
+        <div class="totals-box">
+          <strong>Total: </strong> {{ getTotalWeight() }}g = {{ getTotalCalories().toFixed(1) }} calories
+        </div>
+      </div>
+
+      <!-- Add Ingredient -->
+      <div class="add-ingredient-section">
+        <h3>Add Ingredient</h3>
+        
+        <div class="search-box">
+          <input 
+            type="text" 
+            [(ngModel)]="searchQuery" 
+            (keyup.enter)="searchUSDA()"
+            placeholder="Search USDA database (e.g., 'chicken breast')"
+            class="form-input">
+          <button (click)="searchUSDA()" [disabled]="searching" class="btn btn-primary">
+            {{ searching ? '...' : ' Search' }}
+          </button>
+        </div>
+
+        <!-- Search Results -->
+        <div *ngIf="searchResults" class="search-results">
+          <div *ngIf="searchResults.found" class="result-card">
+            <h4>{{ searchResults.description }}</h4>
+            <p class="nutrition-info">
+              Per 100g: {{ searchResults.nutrition_per_100g.calories }}cal, 
+              C: {{ searchResults.nutrition_per_100g.carbs }}g, 
+              P:{{ searchResults.nutrition_per_100g.protein }}g, 
+              F:{{ searchResults.nutrition_per_100g.fat }}g
+            </p>
+            
+            <div class="weight-selector">
+              <label>Weight: </label>
+              <input 
+                type="number" 
+                [(ngModel)]="selectedWeight" 
+                min="1" 
+                class="weight-input">g
+              <button (click)="addIngredientFromSearch()" class="btn btn-primary">+</button>
+            </div>
+          </div>
+
+          <div *ngIf="!searchResults.found" class="no-results">
+            ❌ No match found. Try a different search term.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button (click)="onClose()" class="btn btn-secondary">Cancel</button>
+      <button (click)="onSave()" class="btn btn-primary">Save Dish</button>
+    </div>
+  </div>
+</div>

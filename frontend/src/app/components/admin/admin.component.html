@@ -1,0 +1,116 @@
+<div class="admin-container">
+  <!-- Header -->
+  <div class="header">
+    <a routerLink="/" class="back-link">← Back to Chatbot</a>
+    <h1>🛠️ Admin Panel</h1>
+    <p>Manage dishes and review missing items</p>
+    <button (click)="logout()" class="btn-logout">Logout</button>
+  </div>
+
+  <!-- Stats Grid -->
+  <div class="stats-grid" *ngIf="stats">
+    <div class="stat-card">
+      <h3>Total Dishes</h3>
+      <div class="value">{{ stats?.total_dishes}}</div>
+    </div>
+    <div class="stat-card">
+      <h3>Missing Dishes</h3>
+      <div class="value">{{ stats?.missing_dishes_count}}</div>
+    </div>
+    <div class="stat-card">
+      <h3>Countries</h3>
+      <div class="value">{{ stats?.countries?.length}}</div>
+    </div>
+    <div class="stat-card">
+      <h3>Queries Today</h3>
+      <div class="value">{{ stats?.queries_today}}</div>
+    </div>
+  </div>
+
+  <!-- Missing Dishes Section -->
+  <div class="section">
+    <h2>📝 Missing Dishes</h2>
+
+    <!-- Filters -->
+    <div class="filters">
+      <select [(ngModel)]="selectedCountry" (change)="onCountryChange()" class="filter-select">
+        <option value="">All Countries</option>
+        <option *ngFor="let country of stats?.countries || []" [value]="country">
+          {{ country }}
+        </option>
+      </select>
+
+      <select [(ngModel)]="sortBy" (change)="onSortChange()" class="filter-select">
+        <option value="query_count">Most Requested</option>
+        <option value="last_queried">Recently Queried</option>
+        <option value="first_queried">First Queried</option>
+      </select>
+
+      <button (click)="loadMissingDishes()" class="btn-refresh">
+        Refresh
+      </button><button (click)="openEditorForNewDish()" class="btn btn-primary">
+        + Add New Dish
+      </button>
+    </div>
+
+    <!-- Loading State -->
+    <div *ngIf="loading" class="loading">
+      <div class="spinner"></div>
+      <p>Loading missing dishes...</p>
+    </div>
+
+    <!-- Empty State -->
+    <div *ngIf="!loading && missingDishes.length === 0" class="empty-state">
+      <svg fill="currentColor" viewBox="0 0 20 20">
+        <path
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+      </svg>
+      <h3>No missing dishes found</h3>
+      <p>All dishes are in the database!</p>
+    </div>
+
+    <!-- Missing Dishes List -->
+    <div *ngIf="!loading && missingDishes.length > 0" class="missing-dishes-list">
+      <div *ngFor="let dish of missingDishes" class="missing-dish-card">
+        <div class="missing-dish-header">
+          <div class="missing-dish-title">
+            <h3>{{ dish.dish_name }}</h3>
+            <div class="meta">
+              <span *ngIf="dish.dish_name_arabic">{{ dish.dish_name_arabic }} • </span>
+              {{ dish.country }}
+            </div>
+            <div class="meta">
+              First: {{ formatDate(dish.first_queried) }} •
+              Last: {{ formatDate(dish.last_queried) }}
+            </div>
+          </div>
+
+          <div class="missing-dish-actions">
+            <span class="query-count-badge">{{ dish.query_count }} queries</span>
+
+            <button class="btn btn-primary" (click)="openEditorForMissingDish(dish)"
+              [disabled]="isLoading(dish) || editorLoading">
+              <span *ngIf="! editorLoading">✏️ Review & Add</span>
+              <span *ngIf="editorLoading"> Loading...</span>
+            </button>
+
+            <button class="btn btn-danger" (click)="dismissDish(dish)" [disabled]="isLoading(dish)">
+              <span *ngIf="!isLoading(dish)">✕ Dismiss</span>
+              <span *ngIf="isLoading(dish)">...</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="ingredients-list">
+          <h4>GPT Suggested Ingredients:</h4>
+          <div *ngFor="let ing of dish.ingredients" class="ingredient-item">
+            • {{ ing.name }} - {{ ing.weight_g }}g
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Add editor modal at the end -->
+<app-dish-editor [dish]="dishToEdit" [isOpen]="editorOpen" (close)="closeEditor()" (save)="saveDish($event)">
+</app-dish-editor>

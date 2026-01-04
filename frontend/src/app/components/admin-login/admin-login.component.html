@@ -1,0 +1,40 @@
+<div class="login-container">
+  <div class="logo">
+    <img alt="logo" src="../../../assets/logo.svg" />
+  </div>
+  <div class="login-box">
+    <h1>🔒 Admin Login</h1>
+    <p class="subtitle">Enter password to access admin panel</p>
+
+    <form (ngSubmit)="onSubmit()" class="login-form">
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          [(ngModel)]="password"
+          name="password"
+          placeholder="Enter admin password"
+          [disabled]="isLoading"
+          class="password-input"
+          autofocus
+        />
+      </div>
+
+      <div *ngIf="errorMessage" class="error-message">
+        ❌ {{ errorMessage }}
+      </div>
+
+      <button
+        type="submit"
+        class="btn-login"
+        [disabled]="isLoading || !password"
+      >
+        <span *ngIf="!isLoading">Login</span>
+        <span *ngIf="isLoading">Authenticating...</span>
+      </button>
+    </form>
+
+    <a routerLink="/" class="back-link">← Back to Home</a>
+  </div>
+</div>

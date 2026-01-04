@@ -1,0 +1,103 @@
+<div class="chat-container">
+  <!-- Header -->
+  <header class="chat-header">
+    <div class="header-left">
+      <h1>
+        <img alt="logo" width="20px" src="../../../assets/mini-logo.svg"> Calorie Calculator
+      </h1>
+
+    </div>
+    <div class="country-badge" *ngIf="country">
+      {{ country }}
+      <button class="change-btn" (click)="goHome()">Change</button>
+    </div>
+  </header>
+  <div class="messages-container">
+    <div *ngFor="let message of messages" [class.user-message]="message.type === 'user'"
+      [class.bot-message]="message.type === 'bot'" class="message">
+      <div *ngIf="message.type === 'user'" class="message-avatar">
+        👤
+      </div>
+
+      <div *ngIf="message.type !== 'user'" class="message-avatar">
+        <img alt="logo" width="20px" src="../../../assets/mini-logo.svg">
+      </div>
+      <div class="message-content">
+        <span>{{ message.content }}</span>
+
+        <div *ngIf="message.response" class="nutrition-info">
+          <h4>{{ message.response.dish_name }}</h4>
+          <div class="totals">
+            <div class="total-item">
+              <span class="label">Calories:</span>
+              <span class="value">{{ message.response.totals.calories | number:'1.0-0' }} kcal</span>
+            </div>
+            <div class="total-item">
+              <span class="label">Carbs:</span>
+              <span class="value">{{ message.response.totals.carbs | number:'1.1-1' }}g</span>
+            </div>
+            <div class="total-item">
+              <span class="label">Protein:</span>
+              <span class="value">{{ message.response.totals.protein | number:'1.1-1' }}g</span>
+            </div>
+            <div class="total-item">
+              <span class="label">Fat:</span>
+              <span class="value">{{ message.response.totals.fat | number:'1.1-1' }}g</span>
+            </div>
+          </div>
+
+          <div class="ingredients-table" *ngIf="message.response.ingredients.length > 0">
+            <h5>Ingredients:</h5>
+            <table>
+              <thead>
+                <tr>
+                  <th>Ingredient</th>
+                  <th>Weight</th>
+                  <th>Calories</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let ing of message.response.ingredients">
+                  <td>{{ ing.name }}</td>
+                  <td>{{ ing.weight_g }}g</td>
+                  <td>{{ ing.calories | number:'1.0-0' }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <span class="message-time">{{ message.timestamp | date:'shortTime' }}</span>
+      </div>
+    </div>
+    <!-- Loading indicator -->
+    <div *ngIf="loading" class="message bot-message">
+      <div class="message-avatar">
+        <img alt="logo" width="20px" src="../../../assets/mini-logo.svg">
+      </div>
+      <div class="message-content">
+        <div class="message-bubble typing">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Quick Queries -->
+  <div class="quick-queries">
+    <button class="quick-query" *ngFor="let query of quickQueries" (click)="sendQuickQuery(query)" [disabled]="loading">
+      {{ query }}
+    </button>
+  </div>
+  <!-- Input Area -->
+  <div class="input-area">
+    <div class="input-wrapper">
+      <input type="text" [(ngModel)]="userInput" (keyup.enter)="sendMessage()"
+        placeholder="Ask about calories (e.g., 'calories in shawarma')" [disabled]="loading" class="message-input">
+      <button class="send-btn" (click)="sendMessage()" [disabled]="!userInput.trim() || loading" class="send-btn">
+        <span *ngIf="!loading">➤</span>
+        <span *ngIf="loading" class="spinner-small"></span>
+      </button>
+    </div>
+  </div>
+</div>
