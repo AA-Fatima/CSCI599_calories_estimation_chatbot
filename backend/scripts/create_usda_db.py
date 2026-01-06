@@ -7,8 +7,8 @@ from pathlib import Path
 # Paths
 BACKEND_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BACKEND_DIR / "data"
-DB_PATH = DATA_DIR / "usda. db"
-FOUNDATION_PATH = DATA_DIR / "USDA_foundation. json"
+DB_PATH = DATA_DIR / "usda.db"
+FOUNDATION_PATH = DATA_DIR / "USDA_foundation.json"
 SR_LEGACY_PATH = DATA_DIR / "USDA_sr_legacy.json"
 
 def create_database():
@@ -24,7 +24,7 @@ def create_database():
     cursor = conn.cursor()
     
     # Create tables
-    cursor. execute('''
+    cursor.execute('''
         CREATE TABLE foods (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             fdc_id INTEGER,
@@ -55,12 +55,12 @@ def create_database():
         print(f"   ✅ Inserted {len(foods)} foundation foods")
     
     # Load SR Legacy Foods
-    if SR_LEGACY_PATH. exists():
+    if SR_LEGACY_PATH.exists():
         print(f"Loading SR Legacy Foods from {SR_LEGACY_PATH}...")
         with open(SR_LEGACY_PATH, 'r', encoding='utf-8') as f:
             data = json.load(f)
         
-        foods = data. get('SRLegacyFoods', []) or data.get('foods', [])
+        foods = data.get('SRLegacyFoods', []) or data.get('foods', [])
         insert_foods(cursor, foods, 'sr_legacy')
         print(f"   ✅ Inserted {len(foods)} legacy foods")
     
@@ -73,9 +73,9 @@ def create_database():
     
     # Check file size
     size_mb = os.path.getsize(DB_PATH) / (1024 * 1024)
-    print(f"📁 Database size:  {size_mb:. 1f} MB")
+    print(f"📁 Database size:  {size_mb:.1f} MB")
     
-    conn. close()
+    conn.close()
     print(f"\n✅ Database created at: {DB_PATH}")
 
 
@@ -91,7 +91,7 @@ def insert_foods(cursor, foods, source):
         cursor.execute('''
             INSERT INTO foods (fdc_id, description, description_lower, calories, protein, carbs, fat, source)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-        ''', (fdc_id, description, description. lower(), calories, protein, carbs, fat, source))
+        ''', (fdc_id, description, description.lower(), calories, protein, carbs, fat, source))
 
 
 def extract_nutrition(food):
