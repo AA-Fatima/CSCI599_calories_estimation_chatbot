@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:8000/api'
+  apiUrl: 'https://csci599-calories-estimation-chatbot-1.onrender.com/api'
 };
