@@ -31,7 +31,14 @@ export class DishEditorComponent implements OnInit, OnChanges {
   @Input() isOpen = false;
   @Output() close = new EventEmitter<void>();
   @Output() save = new EventEmitter<EditableDish>();
+  // Add these inputs
+  @Input() editMode: boolean = false;
+  @Input() editDishId: number | null = null;
 
+  // Add update output
+  @Output() update = new EventEmitter<EditableDish>();
+
+ 
   editedDish: EditableDish = {
     dish_name: '',
     country: '',
@@ -153,8 +160,11 @@ export class DishEditorComponent implements OnInit, OnChanges {
       alert('Please add at least one ingredient');
       return;
     }
-
+    if (this.editMode) {
+    this.update.emit(this.editedDish);
+    } else {
     this.save.emit(this.editedDish);
+    }
   }
 
   onClose(): void {

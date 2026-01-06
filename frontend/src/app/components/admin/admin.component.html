@@ -9,26 +9,120 @@
 
   <!-- Stats Grid -->
   <div class="stats-grid" *ngIf="stats">
-    <div class="stat-card">
+    <div class="stat-card clickable" (click)="switchTab('dishes')">
       <h3>Total Dishes</h3>
-      <div class="value">{{ stats?.total_dishes}}</div>
+      <div class="value">{{ stats?.total_dishes }}</div>
     </div>
-    <div class="stat-card">
+    <div class="stat-card clickable" (click)="switchTab('missing')">
       <h3>Missing Dishes</h3>
-      <div class="value">{{ stats?.missing_dishes_count}}</div>
+      <div class="value">{{ stats?.missing_dishes_count }}</div>
     </div>
     <div class="stat-card">
       <h3>Countries</h3>
-      <div class="value">{{ stats?.countries?.length}}</div>
-    </div>
-    <div class="stat-card">
-      <h3>Queries Today</h3>
-      <div class="value">{{ stats?.queries_today}}</div>
+      <div class="value">{{ stats?.countries?.length }}</div>
     </div>
   </div>
 
-  <!-- Missing Dishes Section -->
-  <div class="section">
+  <!-- ============================================ -->
+  <!-- ALL DISHES TAB -->
+  <!-- ============================================ -->
+  <div class="section" *ngIf="activeTab === 'dishes'">
+    <h2>🍽️ All Dishes</h2>
+
+    <!-- Filters -->
+    <div class="filters">
+      <select [(ngModel)]="selectedCountry" (change)="onCountryChange()" class="filter-select">
+        <option value="">All Countries</option>
+        <option *ngFor="let country of stats?.countries || []" [value]="country">
+          {{ country }}
+        </option>
+      </select>
+
+      <input 
+        type="text" 
+        [(ngModel)]="searchQuery" 
+        (input)="filterDishes()"
+        placeholder="Search dishes..."
+        class="search-input"
+      >
+
+      <button (click)="loadAllDishes()" class="btn-refresh">
+        🔄 Refresh
+      </button>
+      
+      <button (click)="openEditorForNewDish()" class="btn btn-primary">
+        + Add New Dish
+      </button>
+    </div>
+
+    <!-- Loading State -->
+    <div *ngIf="dishesLoading" class="loading">
+      <div class="spinner"></div>
+      <p>Loading dishes...</p>
+    </div>
+
+    <!-- Empty State -->
+    <div *ngIf="!dishesLoading && filteredDishes.length === 0" class="empty-state">
+      <h3>No dishes found</h3>
+      <p>Try adjusting your filters or add a new dish.</p>
+    </div>
+
+    <!-- Dishes List -->
+    <div *ngIf="! dishesLoading && filteredDishes.length > 0" class="dishes-list">
+      <div *ngFor="let dish of filteredDishes" class="dish-card">
+        <div class="dish-header">
+          <div class="dish-title">
+            <h3>{{ dish.dish_id }} -------- {{ dish.dish_name }}</h3>
+            <span class="country-badge">{{ dish.country }}</span>
+          </div>
+          
+          <div class="dish-actions">
+            <button class="btn btn-secondary" (click)="editDish(dish)">
+              ✏️ Edit
+            </button>
+            <button class="btn btn-danger" (click)="deleteDish(dish)">
+              🗑️ Delete
+            </button>
+          </div>
+        </div>
+
+        <div class="dish-nutrition">
+          <div class="nutrition-item">
+            <span class="label">Calories</span>
+            <span class="value">{{ dish.calories | number:'1.0-0' }} kcal</span>
+          </div>
+          <div class="nutrition-item">
+            <span class="label">Weight</span>
+            <span class="value">{{ getDishWeight(dish) }}g</span>
+          </div>
+          <div class="nutrition-item">
+            <span class="label">Carbs</span>
+            <span class="value">{{ getDishCarbs(dish) | number:'1.1-1' }}g</span>
+          </div>
+          <div class="nutrition-item">
+            <span class="label">Protein</span>
+            <span class="value">{{ getDishProtein(dish) | number:'1.1-1' }}g</span>
+          </div>
+          <div class="nutrition-item">
+            <span class="label">Fat</span>
+            <span class="value">{{ getDishFat(dish) | number:'1.1-1' }}g</span>
+          </div>
+        </div>
+
+        <div class="dish-ingredients">
+          <strong>Ingredients ({{ getIngredientCount(dish) }}):</strong>
+          <span class="ingredients-preview">
+            {{ getIngredientsPreview(dish) }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- MISSING DISHES TAB -->
+  <!-- ============================================ -->
+  <div class="section" *ngIf="activeTab === 'missing'">
     <h2>📝 Missing Dishes</h2>
 
     <!-- Filters -->
@@ -47,8 +141,10 @@
       </select>
 
       <button (click)="loadMissingDishes()" class="btn-refresh">
-        Refresh
-      </button><button (click)="openEditorForNewDish()" class="btn btn-primary">
+        🔄 Refresh
+      </button>
+      
+      <button (click)="openEditorForNewDish()" class="btn btn-primary">
         + Add New Dish
       </button>
     </div>
@@ -66,7 +162,7 @@
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
       </svg>
       <h3>No missing dishes found</h3>
-      <p>All dishes are in the database!</p>
+      <p>All dishes are in the database! </p>
     </div>
 
     <!-- Missing Dishes List -->
@@ -80,7 +176,7 @@
               {{ dish.country }}
             </div>
             <div class="meta">
-              First: {{ formatDate(dish.first_queried) }} •
+              First:  {{ formatDate(dish.first_queried) }} •
               Last: {{ formatDate(dish.last_queried) }}
             </div>
           </div>
@@ -91,7 +187,7 @@
             <button class="btn btn-primary" (click)="openEditorForMissingDish(dish)"
               [disabled]="isLoading(dish) || editorLoading">
               <span *ngIf="! editorLoading">✏️ Review & Add</span>
-              <span *ngIf="editorLoading"> Loading...</span>
+              <span *ngIf="editorLoading">Loading...</span>
             </button>
 
             <button class="btn btn-danger" (click)="dismissDish(dish)" [disabled]="isLoading(dish)">
@@ -111,6 +207,14 @@
     </div>
   </div>
 </div>
-<!-- Add editor modal at the end -->
-<app-dish-editor [dish]="dishToEdit" [isOpen]="editorOpen" (close)="closeEditor()" (save)="saveDish($event)">
+
+<!-- Dish Editor Modal -->
+<app-dish-editor 
+  [dish]="dishToEdit" 
+  [isOpen]="editorOpen" 
+  [editMode]="isEditMode"
+  [editDishId]="editingDishId"
+  (close)="closeEditor()" 
+  (save)="saveDish($event)"
+  (update)="updateDish($event)">
 </app-dish-editor>
