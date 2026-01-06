@@ -5,7 +5,7 @@ from contextlib import asynccontextmanager
 
 from app.config import settings
 from app.data.data_loader import load_all_data
-from app.api.routes import chat, admin, countries, comparison
+from app.api.routes import chat, admin, countries
 
 
 @asynccontextmanager
@@ -28,6 +28,7 @@ app = FastAPI(
 )
 
 # Configure CORS
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Allow everything temporarily
@@ -40,7 +41,6 @@ app.add_middleware(
 app.include_router(chat.router, prefix="/api")
 app.include_router(admin.router, prefix="/api")
 app.include_router(countries.router, prefix="/api")
-app.include_router(comparison.router, prefix="/api")
 
 
 @app.get("/")

@@ -114,40 +114,12 @@ class CountryResponse(BaseModel):
 
 
 class TestQuery(BaseModel):
-    """Test query for comparison."""
     query: str
     country: str
     expected_calories: float
     expected_carbs: Optional[float] = None
     expected_protein: Optional[float] = None
     expected_fat: Optional[float] = None
-
-
-class ComparisonResult(BaseModel):
-    """Comparison result for a single query."""
-    query: str
-    expected: NutritionTotals
-    chatbot: NutritionTotals
-    gpt: NutritionTotals
-    deepseek: NutritionTotals
-
-
-class ComparisonMetrics(BaseModel):
-    """Comparison metrics."""
-    mae: float
-    rmse: float
-    mape: float
-    accuracy_10_percent: float
-    accuracy_20_percent: float
-
-
-class ComparisonReport(BaseModel):
-    """Full comparison report."""
-    results: List[ComparisonResult]
-    chatbot_metrics: ComparisonMetrics
-    gpt_metrics: ComparisonMetrics
-    deepseek_metrics: ComparisonMetrics
-    summary: str
 
 
 class AdminStatsResponse(BaseModel):

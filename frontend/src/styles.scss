@@ -271,6 +271,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   max-width: 600px; 
   font-family: Arial, sans-serif;
   z-index: -1;
+  top: 50%;
 }
 
 .msg1 {
@@ -280,7 +281,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   padding: 0.7rem 1rem;
   border-radius: 1rem 1rem 1rem 0; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 50%;
+  width: 75%;
 }
 
 .msg2 {
@@ -292,7 +293,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   width: 50%;
   margin-left: auto;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 
@@ -309,7 +310,7 @@ div.mat-mdc-text-field-wrapper {
     z-index: 0;
     background: #f7f7f7;
     border-radius: 5px;
-    width: 300px;
+    width: 250px;
     border: 1px solid #ededed;
 }
 .mat-mdc-form-field:not(.mat-form-field-disabled) .mat-mdc-floating-label.mdc-floating-label {
@@ -355,5 +356,11 @@ div.mat-mdc-option.mdc-list-item.mdc-list-item--selected {
     margin: auto;
     max-width: calc(100% - 2rem);
     top: 0;
+}
+}
+@media (max-width: 500px) {
+  .hero-content {
+    flex: 1;
+    max-width: 100%;
 }
 }

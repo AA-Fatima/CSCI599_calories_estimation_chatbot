@@ -71,6 +71,10 @@ Remember:
 - Provide realistic weight estimates for ingredients
 - Consider country-specific variations
 - USE EXACT USDA NAMING FORMAT FOR ALL INGREDIENTS
+
+if quentity of ingredient is selected return the ingredient selected weight in grams (g) as float
+if no quentity is selected return the standard portion weight in grams (g) as float for a serving size for example for tabbouleh dish size will be maximum 200g but for a single ingredient should be divided to be at end sum of ingredient weight equal to standard portion weight in grams (g)
+for olive oil use Oil, olive, salad or cooking
 """
 
 

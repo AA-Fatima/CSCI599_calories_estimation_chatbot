@@ -28,7 +28,6 @@ async def verify_admin_password(x_admin_password: Optional[str] = Header(None)):
             detail="Admin password required"
         )
     
-    # Use constant-time comparison to prevent timing attacks
     if not secrets.compare_digest(x_admin_password, settings.admin_password):
         raise HTTPException(
             status_code=401,
