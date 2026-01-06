@@ -30,11 +30,8 @@ app = FastAPI(
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:4200",
-        "https://csci599-calories-estimation-chatbot-2.onrender.com/",
-    ],
-    allow_credentials=True,
+    allow_origins=["*"],  # Allow everything temporarily
+    allow_credentials=False,  # Must be False when using "*"
     allow_methods=["*"],
     allow_headers=["*"],
 )
