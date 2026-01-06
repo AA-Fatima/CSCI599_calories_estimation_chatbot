@@ -1,0 +1,4858 @@
+[
+  {
+    "dish_name": "Boiled Eggs with Turkey and Cheddar",
+    "dish_name_arabic": "بيض مسلوق مع ديك رومي وجبنة شيدر",
+    "country": "Lebanon",
+    "query_text": "Boiled Eggs with Turkey and Cheddar",
+    "gpt_response": {
+      "dish_name": "Boiled Eggs with Turkey and Cheddar",
+      "dish_name_arabic": "بيض مسلوق مع ديك رومي وجبنة شيدر",
+      "is_single_ingredient": false,
+      "country_variant": "Lebanon",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Egg, whole, cooked, hard-boiled",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Turkey, breast, from whole bird, meat only, roasted",
+          "weight_g": 80.0
+        },
+        {
+          "name": "Cheese, cheddar",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 0.5
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Egg, whole, cooked, hard-boiled",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Turkey, breast, from whole bird, meat only, roasted",
+        "weight_g": 80.0
+      },
+      {
+        "name": "Cheese, cheddar",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 0.5
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Fried Eggs with Black Olives and Bread",
+    "dish_name_arabic": "بيض مقلي مع زيتون أسود وخبز",
+    "country": "Lebanon",
+    "query_text": "Fried Eggs with Black Olives and Bread",
+    "gpt_response": {
+      "dish_name": "Fried Eggs with Black Olives and Bread",
+      "dish_name_arabic": "بيض مقلي مع زيتون أسود وخبز",
+      "is_single_ingredient": false,
+      "country_variant": "Lebanon",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Egg, whole, cooked, fried",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Olives, ripe, canned (small-extra large)",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Bread, pita, white, enriched",
+          "weight_g": 80.0
+        },
+        {
+          "name": "Oil, olive, salad or cooking",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 0.5
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Egg, whole, cooked, fried",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Olives, ripe, canned (small-extra large)",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Bread, pita, white, enriched",
+        "weight_g": 80.0
+      },
+      {
+        "name": "Oil, olive, salad or cooking",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 0.5
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Taameya",
+    "dish_name_arabic": "طعمية",
+    "country": "Egypt",
+    "query_text": "Taameya",
+    "gpt_response": {
+      "dish_name": "Taameya",
+      "dish_name_arabic": "طعمية",
+      "is_single_ingredient": false,
+      "country_variant": "Egypt",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Fava beans, mature seeds, cooked, boiled, without salt",
+          "weight_g": 200.0
+        },
+        {
+          "name": "Parsley, fresh",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Coriander (cilantro), leaves, raw",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Dill weed, fresh",
+          "weight_g": 10.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 10.0
+        },
+        {
+          "name": "Leeks, (bulb and lower leaf-portion), cooked, boiled, drained, without salt",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 2.0
+        },
+        {
+          "name": "Spices, coriander seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Seeds, sesame seeds, whole, dried",
+          "weight_g": 10.0
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Fava beans, mature seeds, cooked, boiled, without salt",
+        "weight_g": 200.0
+      },
+      {
+        "name": "Parsley, fresh",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Coriander (cilantro), leaves, raw",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Dill weed, fresh",
+        "weight_g": 10.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 10.0
+      },
+      {
+        "name": "Leeks, (bulb and lower leaf-portion), cooked, boiled, drained, without salt",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 2.0
+      },
+      {
+        "name": "Spices, coriander seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Seeds, sesame seeds, whole, dried",
+        "weight_g": 10.0
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Hawawshi",
+    "dish_name_arabic": "حواوشي",
+    "country": "Egypt",
+    "query_text": "Hawawshi",
+    "gpt_response": {
+      "dish_name": "Hawawshi",
+      "dish_name_arabic": "حواوشي",
+      "is_single_ingredient": false,
+      "country_variant": "Egypt",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Bread, pita, white, enriched",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Beef, ground, 85% lean meat / 15% fat, cooked, pan-browned",
+          "weight_g": 150.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 60.0
+        },
+        {
+          "name": "Peppers, sweet, green, raw",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Tomatoes, red, ripe, raw, year round average",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Parsley, fresh",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Peppers, hot chili, red, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, coriander seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 1.5
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Bread, pita, white, enriched",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Beef, ground, 85% lean meat / 15% fat, cooked, pan-browned",
+        "weight_g": 150.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 60.0
+      },
+      {
+        "name": "Peppers, sweet, green, raw",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Tomatoes, red, ripe, raw, year round average",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Parsley, fresh",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Peppers, hot chili, red, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, coriander seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 1.5
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Molokhia with Rice",
+    "dish_name_arabic": "ملوخية مع رز",
+    "country": "Egypt",
+    "query_text": "Molokhia with Rice",
+    "gpt_response": {
+      "dish_name": "Molokhia with Rice",
+      "dish_name_arabic": "ملوخية مع رز",
+      "is_single_ingredient": false,
+      "country_variant": "Egypt",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Chrysanthemum, garland, cooked, boiled, drained, without salt",
+          "weight_g": 200.0
+        },
+        {
+          "name": "Rice, white, long-grain, regular, cooked",
+          "weight_g": 180.0
+        },
+        {
+          "name": "Chicken, broilers or fryers, meat and skin, cooked, roasted",
+          "weight_g": 150.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Coriander (cilantro), leaves, raw",
+          "weight_g": 10.0
+        },
+        {
+          "name": "Spices, coriander seed",
+          "weight_g": 2.0
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Butter, salted",
+          "weight_g": 25.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Chrysanthemum, garland, cooked, boiled, drained, without salt",
+        "weight_g": 200.0
+      },
+      {
+        "name": "Rice, white, long-grain, regular, cooked",
+        "weight_g": 180.0
+      },
+      {
+        "name": "Chicken, broilers or fryers, meat and skin, cooked, roasted",
+        "weight_g": 150.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Coriander (cilantro), leaves, raw",
+        "weight_g": 10.0
+      },
+      {
+        "name": "Spices, coriander seed",
+        "weight_g": 2.0
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Butter, salted",
+        "weight_g": 25.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Shawarma Masri",
+    "dish_name_arabic": "شاورما مصري",
+    "country": "Egypt",
+    "query_text": "Shawarma Egyptian Style",
+    "gpt_response": {
+      "dish_name": "Shawarma Masri",
+      "dish_name_arabic": "شاورما مصري",
+      "is_single_ingredient": false,
+      "country_variant": "Egypt",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Beef, round, top round steak, boneless, separable lean only, trimmed to 0\" fat, choice, cooked, grilled",
+          "weight_g": 200.0
+        },
+        {
+          "name": "Bread, pita, white, enriched",
+          "weight_g": 80.0
+        },
+        {
+          "name": "Tomatoes, red, ripe, raw, year round average",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Parsley, fresh",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Sesame butter, tahini, from roasted and toasted sesame seeds",
+          "weight_g": 25.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Vinegar, distilled",
+          "weight_g": 10.0
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, coriander seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cardamom",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 1.5
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Beef, round, top round steak, boneless, separable lean only, trimmed to 0\" fat, choice, cooked, grilled",
+        "weight_g": 200.0
+      },
+      {
+        "name": "Bread, pita, white, enriched",
+        "weight_g": 80.0
+      },
+      {
+        "name": "Tomatoes, red, ripe, raw, year round average",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Parsley, fresh",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Sesame butter, tahini, from roasted and toasted sesame seeds",
+        "weight_g": 25.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Vinegar, distilled",
+        "weight_g": 10.0
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, coriander seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cardamom",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 1.5
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Fattah",
+    "dish_name_arabic": "فتة مصرية",
+    "country": "Egypt",
+    "query_text": "Fattah",
+    "gpt_response": {
+      "dish_name": "Fattah",
+      "dish_name_arabic": "فتة مصرية",
+      "is_single_ingredient": false,
+      "country_variant": "Egypt",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Bread, pita, white, enriched",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Rice, white, long-grain, regular, cooked",
+          "weight_g": 150.0
+        },
+        {
+          "name": "Lamb, shoulder, arm, separable lean only, trimmed to 1/4\" fat, choice, cooked, braised",
+          "weight_g": 180.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 10.0
+        },
+        {
+          "name": "Vinegar, distilled",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Tomato paste, canned, without salt added",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Butter, salted",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, coriander seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Bread, pita, white, enriched",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Rice, white, long-grain, regular, cooked",
+        "weight_g": 150.0
+      },
+      {
+        "name": "Lamb, shoulder, arm, separable lean only, trimmed to 1/4\" fat, choice, cooked, braised",
+        "weight_g": 180.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 10.0
+      },
+      {
+        "name": "Vinegar, distilled",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Tomato paste, canned, without salt added",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Butter, salted",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, coriander seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Sayadiya",
+    "dish_name_arabic": "صيادية",
+    "country": "Egypt",
+    "query_text": "Sayadiya",
+    "gpt_response": {
+      "dish_name": "Sayadiya",
+      "dish_name_arabic": "صيادية",
+      "is_single_ingredient": false,
+      "country_variant": "Egypt",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Fish, sea bass, mixed species, cooked, dry heat",
+          "weight_g": 200.0
+        },
+        {
+          "name": "Rice, white, long-grain, regular, cooked",
+          "weight_g": 200.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.5
+        },
+        {
+          "name": "Spices, turmeric, ground",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, coriander seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Nuts, pine nuts, dried",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Lemon juice, raw",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Fish, sea bass, mixed species, cooked, dry heat",
+        "weight_g": 200.0
+      },
+      {
+        "name": "Rice, white, long-grain, regular, cooked",
+        "weight_g": 200.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.5
+      },
+      {
+        "name": "Spices, turmeric, ground",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, coriander seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Nuts, pine nuts, dried",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Lemon juice, raw",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Hamam Mahshi",
+    "dish_name_arabic": "حمام محشي",
+    "country": "Egypt",
+    "query_text": "Hamam Mahshi",
+    "gpt_response": {
+      "dish_name": "Hamam Mahshi",
+      "dish_name_arabic": "حمام محشي",
+      "is_single_ingredient": false,
+      "country_variant": "Egypt",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Pigeon, cooked, roasted",
+          "weight_g": 250.0
+        },
+        {
+          "name": "Rice, white, long-grain, regular, cooked",
+          "weight_g": 150.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Liver, chicken, cooked, pan-fried",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Nuts, pine nuts, dried",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Spices, cardamom",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, cinnamon, ground",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Butter, salted",
+          "weight_g": 25.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Pigeon, cooked, roasted",
+        "weight_g": 250.0
+      },
+      {
+        "name": "Rice, white, long-grain, regular, cooked",
+        "weight_g": 150.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Liver, chicken, cooked, pan-fried",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Nuts, pine nuts, dried",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Spices, cardamom",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, cinnamon, ground",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Butter, salted",
+        "weight_g": 25.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Umm Ali",
+    "dish_name_arabic": "أم علي",
+    "country": "Egypt",
+    "query_text": "Umm Ali",
+    "gpt_response": {
+      "dish_name": "Umm Ali",
+      "dish_name_arabic": "أم علي",
+      "is_single_ingredient": false,
+      "country_variant": "Egypt",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Phyllo dough",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Milk, whole",
+          "weight_g": 300.0
+        },
+        {
+          "name": "Cream, heavy whipping",
+          "weight_g": 60.0
+        },
+        {
+          "name": "Sugar, granulated",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Nuts, almonds",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Nuts, pistachio nuts, raw",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Raisins, seedless",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Nuts, coconut, dried, shredded, sweetened",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Spices, cinnamon, ground",
+          "weight_g": 0.5
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Phyllo dough",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Milk, whole",
+        "weight_g": 300.0
+      },
+      {
+        "name": "Cream, heavy whipping",
+        "weight_g": 60.0
+      },
+      {
+        "name": "Sugar, granulated",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Nuts, almonds",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Nuts, pistachio nuts, raw",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Raisins, seedless",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Nuts, coconut, dried, shredded, sweetened",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Spices, cinnamon, ground",
+        "weight_g": 0.5
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Kabsa",
+    "dish_name_arabic": "كبسة",
+    "country": "Saudi Arabia",
+    "query_text": "Kabsa (National Dish)",
+    "gpt_response": {
+      "dish_name": "Kabsa",
+      "dish_name_arabic": "كبسة",
+      "is_single_ingredient": false,
+      "country_variant": "Saudi Arabia",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Rice, white, long-grain, regular, cooked",
+          "weight_g": 250.0
+        },
+        {
+          "name": "Chicken, broilers or fryers, meat and skin, cooked, roasted",
+          "weight_g": 200.0
+        },
+        {
+          "name": "Tomatoes, red, ripe, raw, year round average",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Carrots, cooked, boiled, drained, without salt",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Spices, cardamom",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cinnamon, ground",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cloves, ground",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, coriander seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Limes, raw",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Tomato paste, canned, without salt added",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 25.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.5
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Rice, white, long-grain, regular, cooked",
+        "weight_g": 250.0
+      },
+      {
+        "name": "Chicken, broilers or fryers, meat and skin, cooked, roasted",
+        "weight_g": 200.0
+      },
+      {
+        "name": "Tomatoes, red, ripe, raw, year round average",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Carrots, cooked, boiled, drained, without salt",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Spices, cardamom",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cinnamon, ground",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cloves, ground",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, coriander seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Limes, raw",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Tomato paste, canned, without salt added",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 25.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.5
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Jareesh",
+    "dish_name_arabic": "جريش",
+    "country": "Saudi Arabia",
+    "query_text": "Jareesh",
+    "gpt_response": {
+      "dish_name": "Jareesh",
+      "dish_name_arabic": "جريش",
+      "is_single_ingredient": false,
+      "country_variant": "Saudi Arabia",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Wheat, bulgur, dry",
+          "weight_g": 200.0
+        },
+        {
+          "name": "Chicken, broilers or fryers, meat and skin, cooked, roasted",
+          "weight_g": 150.0
+        },
+        {
+          "name": "Yogurt, plain, whole milk",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 60.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Tomatoes, red, ripe, raw, year round average",
+          "weight_g": 60.0
+        },
+        {
+          "name": "Butter, salted",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cardamom",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Wheat, bulgur, dry",
+        "weight_g": 200.0
+      },
+      {
+        "name": "Chicken, broilers or fryers, meat and skin, cooked, roasted",
+        "weight_g": 150.0
+      },
+      {
+        "name": "Yogurt, plain, whole milk",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 60.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Tomatoes, red, ripe, raw, year round average",
+        "weight_g": 60.0
+      },
+      {
+        "name": "Butter, salted",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cardamom",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Mutabbaq",
+    "dish_name_arabic": "مطبق",
+    "country": "Saudi Arabia",
+    "query_text": "Mutabbaq",
+    "gpt_response": {
+      "dish_name": "Mutabbaq",
+      "dish_name_arabic": "مطبق",
+      "is_single_ingredient": false,
+      "country_variant": "Saudi Arabia",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Wheat flour, white, all-purpose, enriched, bleached",
+          "weight_g": 120.0
+        },
+        {
+          "name": "Beef, ground, 85% lean meat / 15% fat, cooked, pan-browned",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Egg, whole, cooked, scrambled",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Peppers, sweet, green, raw",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 1.5
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Wheat flour, white, all-purpose, enriched, bleached",
+        "weight_g": 120.0
+      },
+      {
+        "name": "Beef, ground, 85% lean meat / 15% fat, cooked, pan-browned",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Egg, whole, cooked, scrambled",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Peppers, sweet, green, raw",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 1.5
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Saleeg",
+    "dish_name_arabic": "سليق",
+    "country": "Saudi Arabia",
+    "query_text": "Saleeg",
+    "gpt_response": {
+      "dish_name": "Saleeg",
+      "dish_name_arabic": "سليق",
+      "is_single_ingredient": false,
+      "country_variant": "Saudi Arabia",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Rice, white, short-grain, cooked",
+          "weight_g": 250.0
+        },
+        {
+          "name": "Chicken, broilers or fryers, meat and skin, cooked, roasted",
+          "weight_g": 200.0
+        },
+        {
+          "name": "Milk, whole",
+          "weight_g": 150.0
+        },
+        {
+          "name": "Butter, salted",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Spices, cardamom",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, mastic",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Rice, white, short-grain, cooked",
+        "weight_g": 250.0
+      },
+      {
+        "name": "Chicken, broilers or fryers, meat and skin, cooked, roasted",
+        "weight_g": 200.0
+      },
+      {
+        "name": "Milk, whole",
+        "weight_g": 150.0
+      },
+      {
+        "name": "Butter, salted",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Spices, cardamom",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, mastic",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Matazeez",
+    "dish_name_arabic": "مطازيز",
+    "country": "Saudi Arabia",
+    "query_text": "Matazeez",
+    "gpt_response": {
+      "dish_name": "Matazeez",
+      "dish_name_arabic": "مطازيز",
+      "is_single_ingredient": false,
+      "country_variant": "Saudi Arabia",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Wheat flour, white, all-purpose, enriched, bleached",
+          "weight_g": 150.0
+        },
+        {
+          "name": "Lamb, shoulder, arm, separable lean only, trimmed to 1/4\" fat, choice, cooked, braised",
+          "weight_g": 180.0
+        },
+        {
+          "name": "Squash, winter, butternut, cooked, baked, without salt",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Zucchini, includes skin, cooked, boiled, drained, without salt",
+          "weight_g": 80.0
+        },
+        {
+          "name": "Carrots, cooked, boiled, drained, without salt",
+          "weight_g": 60.0
+        },
+        {
+          "name": "Potatoes, boiled, cooked without skin, flesh, without salt",
+          "weight_g": 80.0
+        },
+        {
+          "name": "Tomatoes, red, ripe, raw, year round average",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Tomato paste, canned, without salt added",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Spices, cinnamon, ground",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, cardamom",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Wheat flour, white, all-purpose, enriched, bleached",
+        "weight_g": 150.0
+      },
+      {
+        "name": "Lamb, shoulder, arm, separable lean only, trimmed to 1/4\" fat, choice, cooked, braised",
+        "weight_g": 180.0
+      },
+      {
+        "name": "Squash, winter, butternut, cooked, baked, without salt",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Zucchini, includes skin, cooked, boiled, drained, without salt",
+        "weight_g": 80.0
+      },
+      {
+        "name": "Carrots, cooked, boiled, drained, without salt",
+        "weight_g": 60.0
+      },
+      {
+        "name": "Potatoes, boiled, cooked without skin, flesh, without salt",
+        "weight_g": 80.0
+      },
+      {
+        "name": "Tomatoes, red, ripe, raw, year round average",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Tomato paste, canned, without salt added",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Spices, cinnamon, ground",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, cardamom",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Harees",
+    "dish_name_arabic": "هريس",
+    "country": "Saudi Arabia",
+    "query_text": "Harees",
+    "gpt_response": {
+      "dish_name": "Harees",
+      "dish_name_arabic": "هريس",
+      "is_single_ingredient": false,
+      "country_variant": "Saudi Arabia",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Wheat, durum",
+          "weight_g": 200.0
+        },
+        {
+          "name": "Lamb, shoulder, arm, separable lean only, trimmed to 1/4\" fat, choice, cooked, braised",
+          "weight_g": 200.0
+        },
+        {
+          "name": "Butter, salted",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Spices, cinnamon, ground",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, cardamom",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.5
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Wheat, durum",
+        "weight_g": 200.0
+      },
+      {
+        "name": "Lamb, shoulder, arm, separable lean only, trimmed to 1/4\" fat, choice, cooked, braised",
+        "weight_g": 200.0
+      },
+      {
+        "name": "Butter, salted",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Spices, cinnamon, ground",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, cardamom",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.5
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Thareed",
+    "dish_name_arabic": "ثريد",
+    "country": "Saudi Arabia",
+    "query_text": "Thareed",
+    "gpt_response": {
+      "dish_name": "Thareed",
+      "dish_name_arabic": "ثريد",
+      "is_single_ingredient": false,
+      "country_variant": "Saudi Arabia",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Bread, pita, white, enriched",
+          "weight_g": 150.0
+        },
+        {
+          "name": "Lamb, shoulder, arm, separable lean only, trimmed to 1/4\" fat, choice, cooked, braised",
+          "weight_g": 200.0
+        },
+        {
+          "name": "Potatoes, boiled, cooked without skin, flesh, without salt",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Zucchini, includes skin, cooked, boiled, drained, without salt",
+          "weight_g": 80.0
+        },
+        {
+          "name": "Carrots, cooked, boiled, drained, without salt",
+          "weight_g": 60.0
+        },
+        {
+          "name": "Tomatoes, red, ripe, raw, year round average",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Tomato paste, canned, without salt added",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Spices, cinnamon, ground",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, cardamom",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Bread, pita, white, enriched",
+        "weight_g": 150.0
+      },
+      {
+        "name": "Lamb, shoulder, arm, separable lean only, trimmed to 1/4\" fat, choice, cooked, braised",
+        "weight_g": 200.0
+      },
+      {
+        "name": "Potatoes, boiled, cooked without skin, flesh, without salt",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Zucchini, includes skin, cooked, boiled, drained, without salt",
+        "weight_g": 80.0
+      },
+      {
+        "name": "Carrots, cooked, boiled, drained, without salt",
+        "weight_g": 60.0
+      },
+      {
+        "name": "Tomatoes, red, ripe, raw, year round average",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Tomato paste, canned, without salt added",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Spices, cinnamon, ground",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, cardamom",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Mandi",
+    "dish_name_arabic": "مندي",
+    "country": "Saudi Arabia",
+    "query_text": "Mandi",
+    "gpt_response": {
+      "dish_name": "Mandi",
+      "dish_name_arabic": "مندي",
+      "is_single_ingredient": false,
+      "country_variant": "Saudi Arabia",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Rice, white, long-grain, regular, cooked",
+          "weight_g": 250.0
+        },
+        {
+          "name": "Lamb, leg, whole (shank and sirloin), separable lean only, trimmed to 1/4\" fat, choice, cooked, roasted",
+          "weight_g": 250.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 8.0
+        },
+        {
+          "name": "Spices, cardamom",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cinnamon, ground",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cloves, ground",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, coriander seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, turmeric, ground",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Nuts, almonds",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Raisins, seedless",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 25.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.5
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Rice, white, long-grain, regular, cooked",
+        "weight_g": 250.0
+      },
+      {
+        "name": "Lamb, leg, whole (shank and sirloin), separable lean only, trimmed to 1/4\" fat, choice, cooked, roasted",
+        "weight_g": 250.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 8.0
+      },
+      {
+        "name": "Spices, cardamom",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cinnamon, ground",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cloves, ground",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, coriander seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, turmeric, ground",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Nuts, almonds",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Raisins, seedless",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 25.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.5
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Madfoon",
+    "dish_name_arabic": "مدفون",
+    "country": "Saudi Arabia",
+    "query_text": "Madfoon",
+    "gpt_response": {
+      "dish_name": "Madfoon",
+      "dish_name_arabic": "مدفون",
+      "is_single_ingredient": false,
+      "country_variant": "Saudi Arabia",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Rice, white, long-grain, regular, cooked",
+          "weight_g": 250.0
+        },
+        {
+          "name": "Lamb, leg, whole (shank and sirloin), separable lean only, trimmed to 1/4\" fat, choice, cooked, roasted",
+          "weight_g": 280.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 60.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 8.0
+        },
+        {
+          "name": "Tomatoes, red, ripe, raw, year round average",
+          "weight_g": 60.0
+        },
+        {
+          "name": "Spices, cardamom",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cinnamon, ground",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cloves, ground",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, turmeric, ground",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Nuts, almonds",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Nuts, pine nuts, dried",
+          "weight_g": 10.0
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.5
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Rice, white, long-grain, regular, cooked",
+        "weight_g": 250.0
+      },
+      {
+        "name": "Lamb, leg, whole (shank and sirloin), separable lean only, trimmed to 1/4\" fat, choice, cooked, roasted",
+        "weight_g": 280.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 60.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 8.0
+      },
+      {
+        "name": "Tomatoes, red, ripe, raw, year round average",
+        "weight_g": 60.0
+      },
+      {
+        "name": "Spices, cardamom",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cinnamon, ground",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cloves, ground",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, turmeric, ground",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Nuts, almonds",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Nuts, pine nuts, dried",
+        "weight_g": 10.0
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.5
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Shawarma Saudi",
+    "dish_name_arabic": "شاورما سعودية",
+    "country": "Saudi Arabia",
+    "query_text": "Shawarma Saudi Style",
+    "gpt_response": {
+      "dish_name": "Shawarma Saudi",
+      "dish_name_arabic": "شاورما سعودية",
+      "is_single_ingredient": false,
+      "country_variant": "Saudi Arabia",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Chicken, broilers or fryers, thigh, skinless, boneless, meat only, cooked, roasted",
+          "weight_g": 200.0
+        },
+        {
+          "name": "Bread, pita, white, enriched",
+          "weight_g": 80.0
+        },
+        {
+          "name": "Tomatoes, red, ripe, raw, year round average",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Pickles, cucumber, dill or kosher dill",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 8.0
+        },
+        {
+          "name": "Salad dressing, mayonnaise, regular",
+          "weight_g": 25.0
+        },
+        {
+          "name": "Spices, cardamom",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, paprika",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, turmeric, ground",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 1.5
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Chicken, broilers or fryers, thigh, skinless, boneless, meat only, cooked, roasted",
+        "weight_g": 200.0
+      },
+      {
+        "name": "Bread, pita, white, enriched",
+        "weight_g": 80.0
+      },
+      {
+        "name": "Tomatoes, red, ripe, raw, year round average",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Pickles, cucumber, dill or kosher dill",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 8.0
+      },
+      {
+        "name": "Salad dressing, mayonnaise, regular",
+        "weight_g": 25.0
+      },
+      {
+        "name": "Spices, cardamom",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, paprika",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, turmeric, ground",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 1.5
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Ful Medames",
+    "dish_name_arabic": "فول مدمس",
+    "country": "Saudi Arabia",
+    "query_text": "Ful Medames",
+    "gpt_response": {
+      "dish_name": "Ful Medames",
+      "dish_name_arabic": "فول مدمس",
+      "is_single_ingredient": false,
+      "country_variant": "Saudi Arabia",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Fava beans, mature seeds, cooked, boiled, without salt",
+          "weight_g": 220.0
+        },
+        {
+          "name": "Oil, olive, salad or cooking",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Lemon juice, raw",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Tomatoes, red, ripe, raw, year round average",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Peppers, hot chili, green, raw",
+          "weight_g": 10.0
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Parsley, fresh",
+          "weight_g": 10.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 1.5
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Fava beans, mature seeds, cooked, boiled, without salt",
+        "weight_g": 220.0
+      },
+      {
+        "name": "Oil, olive, salad or cooking",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Lemon juice, raw",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Tomatoes, red, ripe, raw, year round average",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Peppers, hot chili, green, raw",
+        "weight_g": 10.0
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Parsley, fresh",
+        "weight_g": 10.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 1.5
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Sambousek bi Lahmeh",
+    "dish_name_arabic": "سمبوسك باللحمة",
+    "country": "Saudi Arabia",
+    "query_text": "Sambousek (Meat)",
+    "gpt_response": {
+      "dish_name": "Sambousek bi Lahmeh",
+      "dish_name_arabic": "سمبوسك باللحمة",
+      "is_single_ingredient": false,
+      "country_variant": "Saudi Arabia",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Wheat flour, white, all-purpose, enriched, bleached",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Beef, ground, 85% lean meat / 15% fat, cooked, pan-browned",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Parsley, fresh",
+          "weight_g": 10.0
+        },
+        {
+          "name": "Spices, cardamom",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, cinnamon, ground",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 1.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Wheat flour, white, all-purpose, enriched, bleached",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Beef, ground, 85% lean meat / 15% fat, cooked, pan-browned",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Parsley, fresh",
+        "weight_g": 10.0
+      },
+      {
+        "name": "Spices, cardamom",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, cinnamon, ground",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 1.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Gursan",
+    "dish_name_arabic": "قرصان",
+    "country": "Saudi Arabia",
+    "query_text": "Gursan",
+    "gpt_response": {
+      "dish_name": "Gursan",
+      "dish_name_arabic": "قرصان",
+      "is_single_ingredient": false,
+      "country_variant": "Saudi Arabia",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Wheat flour, white, all-purpose, enriched, bleached",
+          "weight_g": 150.0
+        },
+        {
+          "name": "Lamb, shoulder, arm, separable lean only, trimmed to 1/4\" fat, choice, cooked, braised",
+          "weight_g": 150.0
+        },
+        {
+          "name": "Tomatoes, red, ripe, raw, year round average",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Zucchini, includes skin, cooked, boiled, drained, without salt",
+          "weight_g": 60.0
+        },
+        {
+          "name": "Carrots, cooked, boiled, drained, without salt",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Potatoes, boiled, cooked without skin, flesh, without salt",
+          "weight_g": 60.0
+        },
+        {
+          "name": "Tomato paste, canned, without salt added",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Spices, cinnamon, ground",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, cardamom",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Wheat flour, white, all-purpose, enriched, bleached",
+        "weight_g": 150.0
+      },
+      {
+        "name": "Lamb, shoulder, arm, separable lean only, trimmed to 1/4\" fat, choice, cooked, braised",
+        "weight_g": 150.0
+      },
+      {
+        "name": "Tomatoes, red, ripe, raw, year round average",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Zucchini, includes skin, cooked, boiled, drained, without salt",
+        "weight_g": 60.0
+      },
+      {
+        "name": "Carrots, cooked, boiled, drained, without salt",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Potatoes, boiled, cooked without skin, flesh, without salt",
+        "weight_g": 60.0
+      },
+      {
+        "name": "Tomato paste, canned, without salt added",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Spices, cinnamon, ground",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, cardamom",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Masoob",
+    "dish_name_arabic": "معصوب",
+    "country": "Saudi Arabia",
+    "query_text": "Masoob",
+    "gpt_response": {
+      "dish_name": "Masoob",
+      "dish_name_arabic": "معصوب",
+      "is_single_ingredient": false,
+      "country_variant": "Saudi Arabia",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Bananas, ripe and slightly ripe, raw",
+          "weight_g": 150.0
+        },
+        {
+          "name": "Bread, wheat",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Cream, heavy whipping",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Honey",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Butter, salted",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Dates, medjool",
+          "weight_g": 50.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Bananas, ripe and slightly ripe, raw",
+        "weight_g": 150.0
+      },
+      {
+        "name": "Bread, wheat",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Cream, heavy whipping",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Honey",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Butter, salted",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Dates, medjool",
+        "weight_g": 50.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Kleeja",
+    "dish_name_arabic": "كليجا",
+    "country": "Saudi Arabia",
+    "query_text": "Kleeja",
+    "gpt_response": {
+      "dish_name": "Kleeja",
+      "dish_name_arabic": "كليجا",
+      "is_single_ingredient": false,
+      "country_variant": "Saudi Arabia",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Wheat flour, white, all-purpose, enriched, bleached",
+          "weight_g": 150.0
+        },
+        {
+          "name": "Butter, salted",
+          "weight_g": 60.0
+        },
+        {
+          "name": "Sugar, granulated",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Egg, whole, raw, fresh",
+          "weight_g": 25.0
+        },
+        {
+          "name": "Milk, whole",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Spices, cardamom",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cinnamon, ground",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, ginger, ground",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Seeds, sesame seeds, whole, dried",
+          "weight_g": 10.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Wheat flour, white, all-purpose, enriched, bleached",
+        "weight_g": 150.0
+      },
+      {
+        "name": "Butter, salted",
+        "weight_g": 60.0
+      },
+      {
+        "name": "Sugar, granulated",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Egg, whole, raw, fresh",
+        "weight_g": 25.0
+      },
+      {
+        "name": "Milk, whole",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Spices, cardamom",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cinnamon, ground",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, ginger, ground",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Seeds, sesame seeds, whole, dried",
+        "weight_g": 10.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Ma'amoul",
+    "dish_name_arabic": "معمول",
+    "country": "Saudi Arabia",
+    "query_text": "Ma'amoul",
+    "gpt_response": {
+      "dish_name": "Ma'amoul",
+      "dish_name_arabic": "معمول",
+      "is_single_ingredient": false,
+      "country_variant": "Saudi Arabia",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Wheat flour, white, all-purpose, enriched, bleached",
+          "weight_g": 120.0
+        },
+        {
+          "name": "Semolina, enriched",
+          "weight_g": 80.0
+        },
+        {
+          "name": "Butter, salted",
+          "weight_g": 80.0
+        },
+        {
+          "name": "Dates, medjool",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Sugar, powdered",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Spices, cinnamon, ground",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, nutmeg, ground",
+          "weight_g": 0.5
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Wheat flour, white, all-purpose, enriched, bleached",
+        "weight_g": 120.0
+      },
+      {
+        "name": "Semolina, enriched",
+        "weight_g": 80.0
+      },
+      {
+        "name": "Butter, salted",
+        "weight_g": 80.0
+      },
+      {
+        "name": "Dates, medjool",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Sugar, powdered",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Spices, cinnamon, ground",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, nutmeg, ground",
+        "weight_g": 0.5
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Laban",
+    "dish_name_arabic": "لبن",
+    "country": "Saudi Arabia",
+    "query_text": "Laban",
+    "gpt_response": {
+      "dish_name": "Laban",
+      "dish_name_arabic": "لبن",
+      "is_single_ingredient": true,
+      "country_variant": "Saudi Arabia",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Yogurt, plain, whole milk",
+          "weight_g": 250.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 0.5
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Yogurt, plain, whole milk",
+        "weight_g": 250.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 0.5
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Samboosa bi Adas",
+    "dish_name_arabic": "سمبوسة بالعدس",
+    "country": "Saudi Arabia",
+    "query_text": "Samboosa (Lentil)",
+    "gpt_response": {
+      "dish_name": "Samboosa bi Adas",
+      "dish_name_arabic": "سمبوسة بالعدس",
+      "is_single_ingredient": false,
+      "country_variant": "Saudi Arabia",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Wheat flour, white, all-purpose, enriched, bleached",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Lentils, brown, cooked, boiled, drained, without salt",
+          "weight_g": 120.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, coriander seed",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, turmeric, ground",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Peppers, hot chili, green, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 1.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Wheat flour, white, all-purpose, enriched, bleached",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Lentils, brown, cooked, boiled, drained, without salt",
+        "weight_g": 120.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, coriander seed",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, turmeric, ground",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Peppers, hot chili, green, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 1.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Pacha",
+    "dish_name_arabic": "باجة",
+    "country": "Iraq",
+    "query_text": "Pacha",
+    "gpt_response": {
+      "dish_name": "Pacha",
+      "dish_name_arabic": "باجة",
+      "is_single_ingredient": false,
+      "country_variant": "Iraq",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Lamb, variety meats and by-products, brain, cooked, braised",
+          "weight_g": 80.0
+        },
+        {
+          "name": "Beef, variety meats and by-products, stomach, cooked, simmered",
+          "weight_g": 150.0
+        },
+        {
+          "name": "Lamb, variety meats and by-products, tongue, cooked, braised",
+          "weight_g": 80.0
+        },
+        {
+          "name": "Bread, pita, white, enriched",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 10.0
+        },
+        {
+          "name": "Vinegar, distilled",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Spices, turmeric, ground",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cardamom",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, coriander seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Lamb, variety meats and by-products, brain, cooked, braised",
+        "weight_g": 80.0
+      },
+      {
+        "name": "Beef, variety meats and by-products, stomach, cooked, simmered",
+        "weight_g": 150.0
+      },
+      {
+        "name": "Lamb, variety meats and by-products, tongue, cooked, braised",
+        "weight_g": 80.0
+      },
+      {
+        "name": "Bread, pita, white, enriched",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 10.0
+      },
+      {
+        "name": "Vinegar, distilled",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Spices, turmeric, ground",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cardamom",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, coriander seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Bagilla Bil-Dihin",
+    "dish_name_arabic": "باقلاء بالدهن",
+    "country": "Iraq",
+    "query_text": "Bagila Bil-Dihin",
+    "gpt_response": {
+      "dish_name": "Bagilla Bil-Dihin",
+      "dish_name_arabic": "باقلاء بالدهن",
+      "is_single_ingredient": false,
+      "country_variant": "Iraq",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Fava beans, mature seeds, cooked, boiled, without salt",
+          "weight_g": 250.0
+        },
+        {
+          "name": "Butter, salted",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Egg, whole, cooked, hard-boiled",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Bread, pita, white, enriched",
+          "weight_g": 80.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 1.5
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Fava beans, mature seeds, cooked, boiled, without salt",
+        "weight_g": 250.0
+      },
+      {
+        "name": "Butter, salted",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Egg, whole, cooked, hard-boiled",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Bread, pita, white, enriched",
+        "weight_g": 80.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 1.5
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Kleicha",
+    "dish_name_arabic": "كليجة",
+    "country": "Iraq",
+    "query_text": "Kleicha",
+    "gpt_response": {
+      "dish_name": "Kleicha",
+      "dish_name_arabic": "كليجة",
+      "is_single_ingredient": false,
+      "country_variant": "Iraq",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Wheat flour, white, all-purpose, enriched, bleached",
+          "weight_g": 150.0
+        },
+        {
+          "name": "Dates, medjool",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Butter, salted",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Sugar, granulated",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Egg, whole, raw, fresh",
+          "weight_g": 25.0
+        },
+        {
+          "name": "Milk, whole",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Spices, cardamom",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cinnamon, ground",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Seeds, sesame seeds, whole, dried",
+          "weight_g": 10.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Wheat flour, white, all-purpose, enriched, bleached",
+        "weight_g": 150.0
+      },
+      {
+        "name": "Dates, medjool",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Butter, salted",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Sugar, granulated",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Egg, whole, raw, fresh",
+        "weight_g": 25.0
+      },
+      {
+        "name": "Milk, whole",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Spices, cardamom",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cinnamon, ground",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Seeds, sesame seeds, whole, dried",
+        "weight_g": 10.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Tepsi Baytinijan",
+    "dish_name_arabic": "تبسي باذنجان",
+    "country": "Iraq",
+    "query_text": "Tepsi Baytinijan",
+    "gpt_response": {
+      "dish_name": "Tepsi Baytinijan",
+      "dish_name_arabic": "تبسي باذنجان",
+      "is_single_ingredient": false,
+      "country_variant": "Iraq",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Eggplant, cooked, boiled, drained, without salt",
+          "weight_g": 200.0
+        },
+        {
+          "name": "Lamb, ground, cooked, pan-browned",
+          "weight_g": 150.0
+        },
+        {
+          "name": "Potatoes, boiled, cooked without skin, flesh, without salt",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Tomatoes, red, ripe, raw, year round average",
+          "weight_g": 120.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 60.0
+        },
+        {
+          "name": "Peppers, sweet, green, raw",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 8.0
+        },
+        {
+          "name": "Tomato paste, canned, without salt added",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Spices, turmeric, ground",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Eggplant, cooked, boiled, drained, without salt",
+        "weight_g": 200.0
+      },
+      {
+        "name": "Lamb, ground, cooked, pan-browned",
+        "weight_g": 150.0
+      },
+      {
+        "name": "Potatoes, boiled, cooked without skin, flesh, without salt",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Tomatoes, red, ripe, raw, year round average",
+        "weight_g": 120.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 60.0
+      },
+      {
+        "name": "Peppers, sweet, green, raw",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 8.0
+      },
+      {
+        "name": "Tomato paste, canned, without salt added",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Spices, turmeric, ground",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Shawarma Iraqi",
+    "dish_name_arabic": "شاورما عراقية",
+    "country": "Iraq",
+    "query_text": "Shawarma Iraq Style",
+    "gpt_response": {
+      "dish_name": "Shawarma Iraqi",
+      "dish_name_arabic": "شاورما عراقية",
+      "is_single_ingredient": false,
+      "country_variant": "Iraq",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Lamb, shoulder, arm, separable lean only, trimmed to 1/4\" fat, choice, cooked, roasted",
+          "weight_g": 200.0
+        },
+        {
+          "name": "Bread, pita, white, enriched",
+          "weight_g": 80.0
+        },
+        {
+          "name": "Tomatoes, red, ripe, raw, year round average",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Pickles, cucumber, dill or kosher dill",
+          "weight_g": 25.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Sesame butter, tahini, from roasted and toasted sesame seeds",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Vinegar, distilled",
+          "weight_g": 10.0
+        },
+        {
+          "name": "Spices, turmeric, ground",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cardamom",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 1.5
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Lamb, shoulder, arm, separable lean only, trimmed to 1/4\" fat, choice, cooked, roasted",
+        "weight_g": 200.0
+      },
+      {
+        "name": "Bread, pita, white, enriched",
+        "weight_g": 80.0
+      },
+      {
+        "name": "Tomatoes, red, ripe, raw, year round average",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Pickles, cucumber, dill or kosher dill",
+        "weight_g": 25.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Sesame butter, tahini, from roasted and toasted sesame seeds",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Vinegar, distilled",
+        "weight_g": 10.0
+      },
+      {
+        "name": "Spices, turmeric, ground",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cardamom",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 1.5
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Nouriya",
+    "dish_name_arabic": "نورية",
+    "country": "Iraq",
+    "query_text": "Nouriya",
+    "gpt_response": {
+      "dish_name": "Nouriya",
+      "dish_name_arabic": "نورية",
+      "is_single_ingredient": false,
+      "country_variant": "Iraq",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Milk, whole",
+          "weight_g": 300.0
+        },
+        {
+          "name": "Rice flour, white",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Sugar, granulated",
+          "weight_g": 60.0
+        },
+        {
+          "name": "Nuts, coconut, dried, shredded, sweetened",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Nuts, almonds",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Nuts, pistachio nuts, raw",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Spices, cardamom",
+          "weight_g": 0.5
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Milk, whole",
+        "weight_g": 300.0
+      },
+      {
+        "name": "Rice flour, white",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Sugar, granulated",
+        "weight_g": 60.0
+      },
+      {
+        "name": "Nuts, coconut, dried, shredded, sweetened",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Nuts, almonds",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Nuts, pistachio nuts, raw",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Spices, cardamom",
+        "weight_g": 0.5
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Guss",
+    "dish_name_arabic": "قوس",
+    "country": "Iraq",
+    "query_text": "Guss",
+    "gpt_response": {
+      "dish_name": "Guss",
+      "dish_name_arabic": "قوس",
+      "is_single_ingredient": false,
+      "country_variant": "Iraq",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Wheat flour, white, all-purpose, enriched, bleached",
+          "weight_g": 120.0
+        },
+        {
+          "name": "Egg, whole, raw, fresh",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Sugar, granulated",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Butter, salted",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Milk, whole",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Spices, cardamom",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 40.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Wheat flour, white, all-purpose, enriched, bleached",
+        "weight_g": 120.0
+      },
+      {
+        "name": "Egg, whole, raw, fresh",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Sugar, granulated",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Butter, salted",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Milk, whole",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Spices, cardamom",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 40.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Biryani Baghdadi",
+    "dish_name_arabic": "برياني بغدادي",
+    "country": "Iraq",
+    "query_text": "Biryani Baghdad",
+    "gpt_response": {
+      "dish_name": "Biryani Baghdadi",
+      "dish_name_arabic": "برياني بغدادي",
+      "is_single_ingredient": false,
+      "country_variant": "Iraq",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Rice, white, long-grain, regular, cooked",
+          "weight_g": 250.0
+        },
+        {
+          "name": "Chicken, broilers or fryers, meat and skin, cooked, roasted",
+          "weight_g": 200.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 80.0
+        },
+        {
+          "name": "Tomatoes, red, ripe, raw, year round average",
+          "weight_g": 60.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 8.0
+        },
+        {
+          "name": "Yogurt, plain, whole milk",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Nuts, almonds",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Raisins, seedless",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Spices, cardamom",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cinnamon, ground",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, cloves, ground",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, turmeric, ground",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.5
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Rice, white, long-grain, regular, cooked",
+        "weight_g": 250.0
+      },
+      {
+        "name": "Chicken, broilers or fryers, meat and skin, cooked, roasted",
+        "weight_g": 200.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 80.0
+      },
+      {
+        "name": "Tomatoes, red, ripe, raw, year round average",
+        "weight_g": 60.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 8.0
+      },
+      {
+        "name": "Yogurt, plain, whole milk",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Nuts, almonds",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Raisins, seedless",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Spices, cardamom",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cinnamon, ground",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, cloves, ground",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, turmeric, ground",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.5
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Timman Bagilla",
+    "dish_name_arabic": "تمن باقلاء",
+    "country": "Iraq",
+    "query_text": "Talagna",
+    "gpt_response": {
+      "dish_name": "Timman Bagilla",
+      "dish_name_arabic": "تمن باقلاء",
+      "is_single_ingredient": false,
+      "country_variant": "Iraq",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Rice, white, long-grain, regular, cooked",
+          "weight_g": 220.0
+        },
+        {
+          "name": "Fava beans, mature seeds, cooked, boiled, without salt",
+          "weight_g": 150.0
+        },
+        {
+          "name": "Dill weed, fresh",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Butter, salted",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Spices, turmeric, ground",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Rice, white, long-grain, regular, cooked",
+        "weight_g": 220.0
+      },
+      {
+        "name": "Fava beans, mature seeds, cooked, boiled, without salt",
+        "weight_g": 150.0
+      },
+      {
+        "name": "Dill weed, fresh",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Butter, salted",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Spices, turmeric, ground",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Lahm Bil-Basal",
+    "dish_name_arabic": "لحم بالبصل",
+    "country": "Iraq",
+    "query_text": "Lahm Bil-Basal",
+    "gpt_response": {
+      "dish_name": "Lahm Bil-Basal",
+      "dish_name_arabic": "لحم بالبصل",
+      "is_single_ingredient": false,
+      "country_variant": "Iraq",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Lamb, shoulder, arm, separable lean only, trimmed to 1/4\" fat, choice, cooked, braised",
+          "weight_g": 220.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 150.0
+        },
+        {
+          "name": "Tomatoes, red, ripe, raw, year round average",
+          "weight_g": 80.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 8.0
+        },
+        {
+          "name": "Tomato paste, canned, without salt added",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Spices, turmeric, ground",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, coriander seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 25.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Lamb, shoulder, arm, separable lean only, trimmed to 1/4\" fat, choice, cooked, braised",
+        "weight_g": 220.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 150.0
+      },
+      {
+        "name": "Tomatoes, red, ripe, raw, year round average",
+        "weight_g": 80.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 8.0
+      },
+      {
+        "name": "Tomato paste, canned, without salt added",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Spices, turmeric, ground",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, coriander seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 25.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Shimmiya",
+    "dish_name_arabic": "شمية",
+    "country": "Iraq",
+    "query_text": "Shimmya",
+    "gpt_response": {
+      "dish_name": "Shimmiya",
+      "dish_name_arabic": "شمية",
+      "is_single_ingredient": false,
+      "country_variant": "Iraq",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Bread, pita, white, enriched",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Dates, medjool",
+          "weight_g": 120.0
+        },
+        {
+          "name": "Butter, salted",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Cream, heavy whipping",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Spices, cardamom",
+          "weight_g": 0.5
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Bread, pita, white, enriched",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Dates, medjool",
+        "weight_g": 120.0
+      },
+      {
+        "name": "Butter, salted",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Cream, heavy whipping",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Spices, cardamom",
+        "weight_g": 0.5
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Makhlama",
+    "dish_name_arabic": "مخلمة",
+    "country": "Iraq",
+    "query_text": "Makhlama",
+    "gpt_response": {
+      "dish_name": "Makhlama",
+      "dish_name_arabic": "مخلمة",
+      "is_single_ingredient": false,
+      "country_variant": "Iraq",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Egg, whole, cooked, scrambled",
+          "weight_g": 150.0
+        },
+        {
+          "name": "Lamb, ground, cooked, pan-browned",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Tomatoes, red, ripe, raw, year round average",
+          "weight_g": 80.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Butter, salted",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Spices, turmeric, ground",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 1.5
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Egg, whole, cooked, scrambled",
+        "weight_g": 150.0
+      },
+      {
+        "name": "Lamb, ground, cooked, pan-browned",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Tomatoes, red, ripe, raw, year round average",
+        "weight_g": 80.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Butter, salted",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Spices, turmeric, ground",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 1.5
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Fesenjan",
+    "dish_name_arabic": "فسنجان",
+    "country": "Iraq",
+    "query_text": "Faisinjan",
+    "gpt_response": {
+      "dish_name": "Fesenjan",
+      "dish_name_arabic": "فسنجان",
+      "is_single_ingredient": false,
+      "country_variant": "Iraq",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Chicken, broilers or fryers, thigh, skinless, boneless, meat only, cooked, braised",
+          "weight_g": 200.0
+        },
+        {
+          "name": "Nuts, walnuts, English",
+          "weight_g": 80.0
+        },
+        {
+          "name": "Pomegranates, raw",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 60.0
+        },
+        {
+          "name": "Sugar, granulated",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Spices, turmeric, ground",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cinnamon, ground",
+          "weight_g": 0.5
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 25.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Chicken, broilers or fryers, thigh, skinless, boneless, meat only, cooked, braised",
+        "weight_g": 200.0
+      },
+      {
+        "name": "Nuts, walnuts, English",
+        "weight_g": 80.0
+      },
+      {
+        "name": "Pomegranates, raw",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 60.0
+      },
+      {
+        "name": "Sugar, granulated",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Spices, turmeric, ground",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cinnamon, ground",
+        "weight_g": 0.5
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 25.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Rashi Bil-Burghul",
+    "dish_name_arabic": "رشي بالبرغل",
+    "country": "Iraq",
+    "query_text": "Rashi Bil-Burghul",
+    "gpt_response": {
+      "dish_name": "Rashi Bil-Burghul",
+      "dish_name_arabic": "رشي بالبرغل",
+      "is_single_ingredient": false,
+      "country_variant": "Iraq",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Bulgur, cooked",
+          "weight_g": 200.0
+        },
+        {
+          "name": "Lamb, shoulder, arm, separable lean only, trimmed to 1/4\" fat, choice, cooked, braised",
+          "weight_g": 150.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 60.0
+        },
+        {
+          "name": "Tomatoes, red, ripe, raw, year round average",
+          "weight_g": 80.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Tomato paste, canned, without salt added",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Spices, turmeric, ground",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, coriander seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Bulgur, cooked",
+        "weight_g": 200.0
+      },
+      {
+        "name": "Lamb, shoulder, arm, separable lean only, trimmed to 1/4\" fat, choice, cooked, braised",
+        "weight_g": 150.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 60.0
+      },
+      {
+        "name": "Tomatoes, red, ripe, raw, year round average",
+        "weight_g": 80.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Tomato paste, canned, without salt added",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Spices, turmeric, ground",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, coriander seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Kahi",
+    "dish_name_arabic": "قاهي",
+    "country": "Iraq",
+    "query_text": "Kahi",
+    "gpt_response": {
+      "dish_name": "Kahi",
+      "dish_name_arabic": "قاهي",
+      "is_single_ingredient": false,
+      "country_variant": "Iraq",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Wheat flour, white, all-purpose, enriched, bleached",
+          "weight_g": 150.0
+        },
+        {
+          "name": "Butter, salted",
+          "weight_g": 60.0
+        },
+        {
+          "name": "Sugar, granulated",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Water, tap, drinking",
+          "weight_g": 40.0
+        },
+        {
+          "name": "Lemon juice, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Cream, heavy whipping",
+          "weight_g": 40.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Wheat flour, white, all-purpose, enriched, bleached",
+        "weight_g": 150.0
+      },
+      {
+        "name": "Butter, salted",
+        "weight_g": 60.0
+      },
+      {
+        "name": "Sugar, granulated",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Water, tap, drinking",
+        "weight_g": 40.0
+      },
+      {
+        "name": "Lemon juice, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Cream, heavy whipping",
+        "weight_g": 40.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Zubaidi Meshwi",
+    "dish_name_arabic": "زبيدي مشوي",
+    "country": "Iraq",
+    "query_text": "Zubaidi",
+    "gpt_response": {
+      "dish_name": "Zubaidi Meshwi",
+      "dish_name_arabic": "زبيدي مشوي",
+      "is_single_ingredient": false,
+      "country_variant": "Iraq",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Fish, pompano, florida, cooked, dry heat",
+          "weight_g": 250.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 50.0
+        },
+        {
+          "name": "Tomatoes, red, ripe, raw, year round average",
+          "weight_g": 60.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 8.0
+        },
+        {
+          "name": "Lemon juice, raw",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Oil, olive, salad or cooking",
+          "weight_g": 25.0
+        },
+        {
+          "name": "Spices, turmeric, ground",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, coriander seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 2.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Fish, pompano, florida, cooked, dry heat",
+        "weight_g": 250.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 50.0
+      },
+      {
+        "name": "Tomatoes, red, ripe, raw, year round average",
+        "weight_g": 60.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 8.0
+      },
+      {
+        "name": "Lemon juice, raw",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Oil, olive, salad or cooking",
+        "weight_g": 25.0
+      },
+      {
+        "name": "Spices, turmeric, ground",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, coriander seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 2.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Amba",
+    "dish_name_arabic": "عنبة",
+    "country": "Iraq",
+    "query_text": "Amba",
+    "gpt_response": {
+      "dish_name": "Amba",
+      "dish_name_arabic": "عنبة",
+      "is_single_ingredient": false,
+      "country_variant": "Iraq",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Mangos, raw",
+          "weight_g": 150.0
+        },
+        {
+          "name": "Vinegar, distilled",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Oil, vegetable",
+          "weight_g": 20.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Spices, fenugreek seed",
+          "weight_g": 2.0
+        },
+        {
+          "name": "Spices, turmeric, ground",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, cumin seed",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Spices, paprika",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Peppers, hot chili, red, raw",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Spices, mustard seed, yellow",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 3.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Mangos, raw",
+        "weight_g": 150.0
+      },
+      {
+        "name": "Vinegar, distilled",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Oil, vegetable",
+        "weight_g": 20.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Spices, fenugreek seed",
+        "weight_g": 2.0
+      },
+      {
+        "name": "Spices, turmeric, ground",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, cumin seed",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Spices, paprika",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Peppers, hot chili, red, raw",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Spices, mustard seed, yellow",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 3.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-04T00:00:00.000000",
+    "last_queried": "2026-01-04T00:00:00.000000"
+  },
+  {
+    "dish_name": "Chickpeas and Bread",
+    "dish_name_arabic": null,
+    "country": "Lebanon",
+    "query_text": "Chickpeas and Bread",
+    "gpt_response": {
+      "dish_name": "Chickpeas and Bread",
+      "dish_name_arabic": null,
+      "is_single_ingredient": false,
+      "country_variant": "Lebanon",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Bread, white, commercially prepared (includes soft bread crumbs)",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Oil, olive, salad or cooking",
+          "weight_g": 5.0
+        },
+        {
+          "name": "Yogurt, plain, whole milk",
+          "weight_g": 100.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Bread, white, commercially prepared (includes soft bread crumbs)",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Oil, olive, salad or cooking",
+        "weight_g": 5.0
+      },
+      {
+        "name": "Yogurt, plain, whole milk",
+        "weight_g": 100.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-05T20:05:31.142227",
+    "last_queried": "2026-01-05T20:05:31.142227"
+  },
+  {
+    "dish_name": "Grilled Potatoes with Mozzarella Cheese",
+    "dish_name_arabic": null,
+    "country": "Lebanon",
+    "query_text": "Grilled Potatoes with Mozzarella Cheese",
+    "gpt_response": {
+      "dish_name": "Grilled Potatoes with Mozzarella Cheese",
+      "dish_name_arabic": null,
+      "is_single_ingredient": false,
+      "country_variant": "Lebanon",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Potatoes, flesh and skin, raw",
+          "weight_g": 170.0
+        },
+        {
+          "name": "Cheese, mozzarella, whole milk",
+          "weight_g": 30.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Potatoes, flesh and skin, raw",
+        "weight_g": 170.0
+      },
+      {
+        "name": "Cheese, mozzarella, whole milk",
+        "weight_g": 30.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-05T20:07:08.151431",
+    "last_queried": "2026-01-05T20:07:08.151431"
+  },
+  {
+    "dish_name": "Sawda Me2leye",
+    "dish_name_arabic": "سوداء معلية",
+    "country": "Lebanon",
+    "query_text": "Sawda Me2leye",
+    "gpt_response": {
+      "dish_name": "Sawda Me2leye",
+      "dish_name_arabic": "سوداء معلية",
+      "is_single_ingredient": false,
+      "country_variant": "Lebanon",
+      "user_intent": "unknown_dish",
+      "modifications": [],
+      "ingredients_breakdown": [
+        {
+          "name": "Chicken, liver, all classes, cooked, simmered",
+          "weight_g": 100.0
+        },
+        {
+          "name": "Lemon juice, raw",
+          "weight_g": 10.0
+        },
+        {
+          "name": "Spices, pepper, black",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Salt, table",
+          "weight_g": 1.0
+        },
+        {
+          "name": "Oil, olive",
+          "weight_g": 15.0
+        },
+        {
+          "name": "Onions, raw",
+          "weight_g": 30.0
+        },
+        {
+          "name": "Garlic, raw",
+          "weight_g": 5.0
+        }
+      ]
+    },
+    "ingredients": [
+      {
+        "name": "Chicken, liver, all classes, cooked, simmered",
+        "weight_g": 100.0
+      },
+      {
+        "name": "Lemon juice, raw",
+        "weight_g": 10.0
+      },
+      {
+        "name": "Spices, pepper, black",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Salt, table",
+        "weight_g": 1.0
+      },
+      {
+        "name": "Oil, olive",
+        "weight_g": 15.0
+      },
+      {
+        "name": "Onions, raw",
+        "weight_g": 30.0
+      },
+      {
+        "name": "Garlic, raw",
+        "weight_g": 5.0
+      }
+    ],
+    "query_count": 1,
+    "first_queried": "2026-01-05T21:05:43.563075",
+    "last_queried": "2026-01-05T21:05:43.563075"
+  }
+]
