@@ -1,10 +1,11 @@
 """USDA data handler."""
 import json
 import gzip
+import gc
 from pathlib import Path
 from typing import List, Dict, Optional, Tuple
 from rapidfuzz import fuzz, process
-from app.config import settings
+from app.config import settings, BASE_DIR
 
 
 class USDAHandler: 
@@ -20,12 +21,18 @@ class USDAHandler:
         """Load JSON file, handling both regular and gzip compressed files."""
         path = Path(file_path)
         
-        # Try to detect if file is gzipped by reading first bytes
-        try: 
+        if not path.exists():
+            # Try .gz version
+            gz_path = Path(str(file_path) + ".gz")
+            if gz_path.exists():
+                path = gz_path
+            else:
+                raise FileNotFoundError(f"File not found: {file_path}")
+        
+        try:
             with open(path, 'rb') as f:
                 first_bytes = f.read(2)
             
-            # GZIP magic number is 1f 8b
             if first_bytes == b'\x1f\x8b': 
                 print(f"      📦 Detected GZIP format, decompressing...")
                 with gzip.open(path, 'rt', encoding='utf-8') as f:
@@ -36,7 +43,7 @@ class USDAHandler:
         except Exception as e: 
             print(f"      ❌ Error loading {path}: {e}")
             raise
-        
+    
     def load_data(self):
         """Load USDA data from JSON files."""
         # Load Foundation Foods
@@ -44,35 +51,41 @@ class USDAHandler:
             print(f"   Loading foundation from: {settings.usda_foundation_path}")
             foundation_data = self._load_json_file(settings.usda_foundation_path)
             self.foundation_foods = (
-                foundation_data.get('FoundationFoods', []) or 
+                foundation_data.get('FoundationFoods', []) or
                 foundation_data.get('foods', [])
             )
+            del foundation_data  # Free memory
+            gc.collect()
             print(f"   ✅ Loaded {len(self.foundation_foods)} foundation foods")
         except FileNotFoundError:
             print(f"   ⚠️ Foundation file not found - skipping")
             self.foundation_foods = []
-        except Exception as e:
+        except Exception as e: 
             print(f"   ⚠️ Error loading foundation foods: {e}")
             self.foundation_foods = []
         
-        # Load SR Legacy Foods
-        try:
-            print(f"   Loading legacy from: {settings.usda_sr_legacy_path}")
-            legacy_data = self._load_json_file(settings.usda_sr_legacy_path)
-            self.legacy_foods = (
-                legacy_data.get('SRLegacyFoods', []) or 
-                legacy_data.get('foods', [])
-            )
-            print(f"   ✅ Loaded {len(self.legacy_foods)} legacy foods")
-        except FileNotFoundError: 
-            print(f"   ⚠️ SR Legacy file not found - continuing with foundation only")
-            self.legacy_foods = []
-        except Exception as e: 
-            print(f"   ⚠️ Error loading legacy foods:  {e}")
-            self.legacy_foods = []
+        # Load SR Legacy Foods (from split files)
+        self.legacy_foods = []
+        for i in range(1, settings.usda_sr_legacy_parts + 1):
+            part_file = BASE_DIR / "data" / f"USDA_sr_legacy_part{i}.json"
+            try:
+                print(f"   Loading legacy part {i}...")
+                part_data = self._load_json_file(str(part_file))
+                foods = (
+                    part_data.get('SRLegacyFoods', []) or
+                    part_data.get('foods', [])
+                )
+                self.legacy_foods.extend(foods)
+                del part_data  # Free memory immediately
+                gc.collect()
+                print(f"   ✅ Loaded {len(foods)} foods from part {i}")
+            except FileNotFoundError:
+                print(f"   ⚠️ Part {i} not found - skipping")
+            except Exception as e: 
+                print(f"   ⚠️ Error loading part {i}: {e}")
         
         self.all_foods = self.foundation_foods + self.legacy_foods
-        print(f"   📊 Total USDA foods loaded:  {len(self.all_foods)}")
+        print(f"   📊 Total USDA foods loaded: {len(self.all_foods)}")
     
     def search_ingredient(self, ingredient_name: str, threshold: int = 70) -> Optional[Dict]:
         """Search for ingredient in USDA database."""
@@ -80,11 +93,9 @@ class USDAHandler:
             print(f"      ⚠️ No USDA foods loaded!")
             return None
         
-        # Normalize search term
         search_term = ingredient_name.lower().strip()
-        print(f"      🔎 Normalized search: '{search_term}'")
+        print(f"      🔎 Normalized search:  '{search_term}'")
         
-        # Build food list
         food_items = []
         for food in self.all_foods:
             desc = food.get('description', '')
@@ -98,18 +109,15 @@ class USDAHandler:
                 return food
         
         # === STRATEGY 2: Starts with match ===
-        starts_matches:  List[Tuple[str, Dict, int]] = []  # (desc_orig, food, length)
+        starts_matches:  List[Tuple[str, Dict, int]] = []
         
         for desc_lower, desc_orig, food in food_items:
             if desc_lower.startswith(search_term):
                 starts_matches.append((desc_orig, food, len(desc_orig)))
             elif desc_lower.startswith(search_term + ","):
                 starts_matches.append((desc_orig, food, len(desc_orig)))
-
-        # In the STARTS-WITH section, add preference for "raw" or plain versions
-            
+        
         if starts_matches:
-            # Prefer items WITHOUT "extra", "light", "low", etc.
             def score_match(match_tuple):
                 desc_lower = match_tuple[0].lower()
                 penalty = 0
@@ -117,40 +125,38 @@ class USDAHandler:
                     penalty += 100
                 if 'salad' in desc_lower or 'dressing' in desc_lower:
                     penalty += 50
-                return (penalty, match_tuple[2])  # (penalty, length)
+                return (penalty, match_tuple[2])
             
             starts_matches.sort(key=score_match)
-            print(f"      ✅ STARTS-WITH match:  '{starts_matches[0][0]}'")
+            print(f"      ✅ STARTS-WITH match: '{starts_matches[0][0]}'")
             return starts_matches[0][1]
 
         # === STRATEGY 3: Contains match ===
         search_parts = [p.strip() for p in search_term.split(',')]
         main_ingredient = search_parts[0]
         
-        contains_matches: List[Tuple[str, Dict, int, int]] = []  # (desc_orig, food, score, length)
+        contains_matches: List[Tuple[str, Dict, int, int]] = []
         
-        for desc_lower, desc_orig, food in food_items: 
+        for desc_lower, desc_orig, food in food_items:
             desc_parts = [p.strip() for p in desc_lower.split(',')]
             
-            # First part must match
             if desc_parts[0] == main_ingredient or desc_parts[0] == main_ingredient + 's':
                 if len(search_parts) > 1:
                     all_found = all(sp in desc_lower for sp in search_parts)
-                    if all_found:
+                    if all_found: 
                         score = 100
                         if 'raw' in desc_lower:
                             score += 10
                         contains_matches.append((desc_orig, food, score, len(desc_orig)))
                 else:
                     score = 100
-                    if 'raw' in desc_lower: 
+                    if 'raw' in desc_lower:
                         score += 20
                     if any(x in desc_lower for x in ['juice', 'pudding', 'pie', 'cake', 'loaf', 'baby', 'infant']):
                         score -= 50
                     contains_matches.append((desc_orig, food, score, len(desc_orig)))
         
-        if contains_matches:
-            # Sort by score (desc), then length (asc)
+        if contains_matches: 
             contains_matches.sort(key=lambda x:  (-x[2], x[3]))
             print(f"      ✅ CONTAINS match: '{contains_matches[0][0]}'")
             return contains_matches[0][1]
@@ -164,17 +170,17 @@ class USDAHandler:
         
         if result and result[1] >= threshold:
             for desc_lower, desc_orig, food in food_items: 
-                if desc_lower == result[0]:
+                if desc_lower == result[0]: 
                     print(f"      ✅ FUZZY match ({result[1]}%): '{desc_orig}'")
                     return food
         
         print(f"      ❌ No match found for '{search_term}'")
         return None
     
-    def get_nutrition_per_100g(self, food_item:  Dict) -> Dict[str, float]:
+    def get_nutrition_per_100g(self, food_item: Dict) -> Dict[str, float]:
         """Extract nutritional values per 100g from USDA food item."""
         nutrients = {
-            'calories':  0.0,
+            'calories': 0.0,
             'carbs': 0.0,
             'protein': 0.0,
             'fat': 0.0
@@ -191,31 +197,21 @@ class USDAHandler:
                 name = nutrient_item.get('nutrientName', '').lower()
                 value = nutrient_item.get('value', 0.0)
             
-            # Energy/Calories - multiple possible names
             if 'energy' in name and 'kcal' in nutrient_info.get('unitName', '').lower():
                 nutrients['calories'] = float(value)
             elif 'energy' in name and nutrients['calories'] == 0:
-                # Check if unit is kcal in the name itself
                 unit = nutrient_info.get('unitName', '')
-                if unit.lower() == 'kcal': 
+                if unit.lower() == 'kcal':
                     nutrients['calories'] = float(value)
-                # If value seems reasonable for kcal (not kJ which is much higher)
                 elif value < 1000 and value > 0:
                     nutrients['calories'] = float(value)
-            
-            # Carbohydrates
             elif 'carbohydrate' in name and 'by difference' in name:
                 nutrients['carbs'] = float(value)
-            
-            # Protein
             elif name == 'protein': 
                 nutrients['protein'] = float(value)
-            
-            # Fat
             elif 'total lipid' in name or name == 'total lipid (fat)' or name == 'fat':
                 nutrients['fat'] = float(value)
         
-        # Debug print
         print(f"         📊 Extracted:  {nutrients['calories']}cal, C:{nutrients['carbs']}g, P:{nutrients['protein']}g, F:{nutrients['fat']}g")
         
         return nutrients
