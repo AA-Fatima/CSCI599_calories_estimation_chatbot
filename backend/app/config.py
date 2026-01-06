@@ -3,7 +3,6 @@ from pathlib import Path
 from typing import List
 from pydantic_settings import BaseSettings
 
-# ADD THIS LINE - gets the backend folder location
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 class Settings(BaseSettings):
@@ -23,9 +22,9 @@ class Settings(BaseSettings):
     # CORS
     cors_origins: str = "http://localhost:4200"
     
-    # Data paths - CHANGE THESE TO USE BASE_DIR
+
     usda_foundation_path: str = str(BASE_DIR / "data" / "USDA_foundation.json")
-    usda_sr_legacy_path: str = str(BASE_DIR / "data" / "USDA_sr_legacy.json")
+    usda_sr_legacy_path:  str = str(BASE_DIR / "data" / "USDA_sr_legacy.json.gz")
     dishes_path: str = str(BASE_DIR / "data" / "dishes.xlsx")
     missing_dishes_path:  str = str(BASE_DIR / "data" / "missing_dishes.json")
     test_queries_path: str = str(BASE_DIR / "data" / "test_queries.xlsx")
