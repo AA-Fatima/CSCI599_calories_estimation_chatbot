@@ -297,6 +297,52 @@ class DishesHandler:
             ]
         return self.dishes
 
+    
+    def get_all_countries(self) -> List[str]:
+        """Get list of all unique countries."""
+        countries = set()
+        for dish in self.dishes:
+            country = self._get_dish_country(dish)
+            if country:
+                countries.add(country)
+        return sorted(list(countries))
+    
+    def add_dish(self, dish_data: Dict) -> bool:
+        """Add a new dish to the Excel file."""
+        try:
+            self.dishes.append(dish_data)
+            self.df = pd.DataFrame(self.dishes)
+            self.df.to_excel(settings.dishes_path, index=False, sheet_name='dishes')
+            return True
+        except Exception as e:
+            print(f"Error adding dish: {e}")
+            return False
+    
+    def update_dish(self, dish_id:  int, dish_data: Dict) -> bool:
+        """Update an existing dish."""
+        try: 
+            for i, dish in enumerate(self.dishes):
+                if dish.get('dish_id') == dish_id:
+                    self.dishes[i] = dish_data
+                    break
+            self.df = pd.DataFrame(self.dishes)
+            self.df.to_excel(settings.dishes_path, index=False, sheet_name='dishes')
+            return True
+        except Exception as e:
+            print(f"Error updating dish: {e}")
+            return False
+    
+    def delete_dish(self, dish_id:  int) -> bool:
+        """Delete a dish."""
+        try:
+            self.dishes = [d for d in self.dishes if d.get('dish_id') != dish_id]
+            self.df = pd.DataFrame(self.dishes)
+            self.df.to_excel(settings.dishes_path, index=False, sheet_name='dishes')
+            return True
+        except Exception as e:
+            print(f"Error deleting dish: {e}")
+            return False
+
 
 # Global instance
 dishes_handler = DishesHandler()
