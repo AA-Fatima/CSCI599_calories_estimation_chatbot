@@ -1,7 +1,10 @@
 """Application configuration."""
-from pydantic_settings import BaseSettings
+from pathlib import Path
 from typing import List
+from pydantic_settings import BaseSettings
 
+# ADD THIS LINE - gets the backend folder location
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 class Settings(BaseSettings):
     """Application settings."""
@@ -20,12 +23,12 @@ class Settings(BaseSettings):
     # CORS
     cors_origins: str = "http://localhost:4200"
     
-    # Data paths
-    usda_foundation_path: str = "data/USDA_foundation.json"
-    usda_sr_legacy_path: str = "data/USDA_sr_legacy.json"
-    dishes_path: str = "data/dishes.xlsx"
-    missing_dishes_path: str = "data/missing_dishes.json"
-    test_queries_path: str = "data/test_queries.xlsx"
+    # Data paths - CHANGE THESE TO USE BASE_DIR
+    usda_foundation_path: str = str(BASE_DIR / "data" / "USDA_foundation.json")
+    usda_sr_legacy_path: str = str(BASE_DIR / "data" / "USDA_sr_legacy.json")
+    dishes_path: str = str(BASE_DIR / "data" / "dishes.xlsx")
+    missing_dishes_path:  str = str(BASE_DIR / "data" / "missing_dishes.json")
+    test_queries_path: str = str(BASE_DIR / "data" / "test_queries.xlsx")
     
     class Config:
         env_file = ".env"
