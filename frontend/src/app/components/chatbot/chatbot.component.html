@@ -26,22 +26,21 @@
         <span>{{ message.content }}</span>
 
         <div *ngIf="message.response" class="nutrition-info">
-          <h4>{{ message.response.dish_name }}</h4>
+          <h4>{{ message.response.dish_name }}
+            <div class="total-item">
+              <span class="value">{{ message.response.totals.calories | number:'1.0-0' }} kcal</span>
+            </div></h4>
           <div class="totals">
             <div class="total-item">
-              <span class="label">Calories:</span>
-              <span class="value">{{ message.response.totals.calories | number:'1.0-0' }} kcal</span>
-            </div>
-            <div class="total-item">
-              <span class="label">Carbs:</span>
+              <span class="label">Carbs</span>
               <span class="value">{{ message.response.totals.carbs | number:'1.1-1' }}g</span>
             </div>
             <div class="total-item">
-              <span class="label">Protein:</span>
+              <span class="label">Protein</span>
               <span class="value">{{ message.response.totals.protein | number:'1.1-1' }}g</span>
             </div>
             <div class="total-item">
-              <span class="label">Fat:</span>
+              <span class="label">Fat</span>
               <span class="value">{{ message.response.totals.fat | number:'1.1-1' }}g</span>
             </div>
           </div>

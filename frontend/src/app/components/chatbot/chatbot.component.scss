@@ -517,24 +517,38 @@
 }
 
 .nutrition-info h4 {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     .total-item {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+    color: #FFF;
+    font-size: 13px;
+    border-radius: 10px !important;
+}
 }
 
 .totals {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 0.5rem;
   margin: 1rem 0;
 }
 
 .total-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem;
-  background: rgba(102, 126, 234, 0.1);
-  border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
 }
+
 
 .total-item .label {
   font-weight: 600;

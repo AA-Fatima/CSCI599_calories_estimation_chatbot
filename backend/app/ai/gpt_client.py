@@ -28,7 +28,7 @@ class GPTClient:
         
         try:
             response = self.client.chat.completions.create(
-                model="gpt-4",
+                model="gpt-4o",
                 messages=[
                     {"role": "system", "content": "You are a food analysis assistant. Return only valid JSON."},
                     {"role": "user", "content": prompt}
@@ -71,7 +71,7 @@ class GPTClient:
         
         try:
             response = self.client.chat.completions.create(
-                model="gpt-4",
+                model="gpt-4o",
                 messages=[
                     {"role": "system", "content": "You are a nutritionist. Return only valid JSON."},
                     {"role": "user", "content": prompt}
