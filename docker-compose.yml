@@ -1,6 +1,24 @@
 version: '3.8'
 
 services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nutriarab
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
   backend:
     build: ./backend
     ports:
@@ -9,8 +27,19 @@ services:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY}
       - CORS_ORIGINS=http://localhost:4200,http://localhost
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=nutriarab
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - OPENAI_MODEL=gpt-4
+      - EMBEDDING_MODEL=all-MiniLM-L6-v2
+      - SIMILARITY_THRESHOLD=0.6
     volumes:
       - ./backend/data:/app/data
+    depends_on:
+      postgres:
+        condition: service_healthy
     networks:
       - app-network
 
@@ -22,6 +51,9 @@ services:
       - backend
     networks:
       - app-network
+
+volumes:
+  postgres_data:
 
 networks:
   app-network:

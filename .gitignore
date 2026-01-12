@@ -32,7 +32,10 @@ Thumbs.db
 .env
 .env.local
 
-# Data - Keep only required samples
+# Database - PostgreSQL data volumes
+postgres_data/
+
+# Data - Keep only required samples for migration
 backend/data/*.xlsx
 !backend/data/dishes.xlsx
 !backend/data/test_queries.xlsx
