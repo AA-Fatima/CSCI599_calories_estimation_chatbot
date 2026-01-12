@@ -37,3 +37,8 @@ backend/data/*.xlsx
 !backend/data/dishes.xlsx
 !backend/data/test_queries.xlsx
 backend/data/missing_dishes.json
+backend/data/USDA_sr_legacy.json
+
+
+fontend/src/environments/environment.ts
+backend/app/main.py
