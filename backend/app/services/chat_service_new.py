@@ -391,12 +391,19 @@ class ChatServiceNew:
             
             # Log as missing dish
             try:
+                # Standardize serialization method
+                gpt_response_dict = (
+                    gpt_response.model_dump() 
+                    if hasattr(gpt_response, 'model_dump') 
+                    else gpt_response.dict()
+                )
+                
                 await missing_dishes_repo.add_or_update(
                     dish_name=gpt_response.dish_name,
                     dish_name_arabic=gpt_response.dish_name_arabic,
                     country=country,
                     query_text=gpt_response.dish_name,
-                    gpt_response=gpt_response.model_dump() if hasattr(gpt_response, 'model_dump') else gpt_response.dict(),
+                    gpt_response=gpt_response_dict,
                     ingredients=[
                         {'name': ing.name, 'weight_g': ing.weight_g}
                         for ing in gpt_response.ingredients_breakdown

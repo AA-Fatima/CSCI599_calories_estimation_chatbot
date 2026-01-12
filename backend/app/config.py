@@ -32,7 +32,14 @@ class Settings(BaseSettings):
     # AI Settings
     openai_model: str = "gpt-4"
     embedding_model: str = "all-MiniLM-L6-v2"
+    embedding_dimension: int = 384  # Dimension for all-MiniLM-L6-v2
     similarity_threshold: float = 0.6
+    
+    # Rate Limiting
+    rate_limit_per_minute: int = 30
+    
+    # Migration Settings
+    migration_batch_size: int = 32
     
     # Legacy data paths (for migration only)
     usda_db_path: str = str(BASE_DIR / "data" / "usda.db")

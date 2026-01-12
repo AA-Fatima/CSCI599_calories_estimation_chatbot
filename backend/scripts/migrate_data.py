@@ -58,7 +58,8 @@ class DataMigrator:
         
         # Generate embeddings in batch
         logger.info("Generating embeddings for all dishes...")
-        embeddings = embedding_service.encode_batch(dish_names, batch_size=32)
+        batch_size = settings.migration_batch_size
+        embeddings = embedding_service.encode_batch(dish_names, batch_size=batch_size)
         
         # Insert dishes
         count = 0
@@ -151,7 +152,8 @@ class DataMigrator:
         
         # Generate embeddings in batch
         logger.info("Generating embeddings for all USDA foods...")
-        embeddings = embedding_service.encode_batch(descriptions, batch_size=64)
+        batch_size = settings.migration_batch_size
+        embeddings = embedding_service.encode_batch(descriptions, batch_size=batch_size)
         
         # Insert foods
         count = 0

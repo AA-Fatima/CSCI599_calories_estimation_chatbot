@@ -13,8 +13,11 @@ from app.api.routes import chat, countries
 from app.api.routes import admin_new as admin
 
 
-# Initialize rate limiter
-limiter = Limiter(key_func=get_remote_address, default_limits=["30/minute"])
+# Initialize rate limiter with configurable rate
+limiter = Limiter(
+    key_func=get_remote_address,
+    default_limits=[f"{settings.rate_limit_per_minute}/minute"]
+)
 
 
 @asynccontextmanager

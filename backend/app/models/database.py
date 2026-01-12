@@ -5,6 +5,7 @@ from sqlalchemy import Column, Integer, String, Float, DateTime, Text, JSON, Ind
 from sqlalchemy.orm import relationship
 from pgvector.sqlalchemy import Vector
 from app.database import Base
+from app.config import settings
 
 
 class Dish(Base):
@@ -26,8 +27,8 @@ class Dish(Base):
     total_protein = Column(Float, nullable=True)
     total_fat = Column(Float, nullable=True)
     
-    # Vector embedding for semantic search (384 dimensions for all-MiniLM-L6-v2)
-    embedding = Column(Vector(384), nullable=True)
+    # Vector embedding for semantic search (dimension from config)
+    embedding = Column(Vector(settings.embedding_dimension), nullable=True)
     
     # Metadata
     created_at = Column(DateTime, default=datetime.utcnow)
@@ -59,8 +60,8 @@ class USDAFood(Base):
     # Source information
     source = Column(String(100), nullable=True)
     
-    # Vector embedding for semantic search
-    embedding = Column(Vector(384), nullable=True)
+    # Vector embedding for semantic search (dimension from config)
+    embedding = Column(Vector(settings.embedding_dimension), nullable=True)
     
     # Metadata
     created_at = Column(DateTime, default=datetime.utcnow)
