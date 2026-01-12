@@ -1,17 +1,33 @@
+# Web Framework
 fastapi==0.109.0
-uvicorn==0.27.0
+uvicorn[standard]==0.27.0
 pydantic==2.5.3
 pydantic-settings==2.1.0
-python-multipart==0.0.6
-python-dotenv==1.0.0
+
+# Database
+asyncpg==0.29.0
+sqlalchemy[asyncio]==2.0.25
+pgvector==0.2.4
+
+# AI
 openai==1.10.0
+sentence-transformers==2.3.1
+
+# Security
+slowapi==0.1.9
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+
+# Utilities
+python-dotenv==1.0.0
+loguru==0.7.2
+python-multipart==0.0.6
 httpx==0.26.0
+
+# Migration only (can be removed after migration)
 pandas==2.1.4
 openpyxl==3.1.2
 rapidfuzz==3.6.1
 numpy==1.26.3
 scipy==1.11.4
-python-jose[cryptography]==3.3.0
-passlib[bcrypt]==1.7.4
 python-dateutil==2.8.2
-sentence-transformers==3.0.1
