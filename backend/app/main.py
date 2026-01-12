@@ -1,12 +1,20 @@
 """Main FastAPI application."""
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 from loguru import logger
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
 
 from app.config import settings
 from app.database import init_db, close_db
-from app.api.routes import chat, admin, countries
+from app.api.routes import chat, countries
+from app.api.routes import admin_new as admin
+
+
+# Initialize rate limiter
+limiter = Limiter(key_func=get_remote_address, default_limits=["30/minute"])
 
 
 @asynccontextmanager
@@ -43,6 +51,10 @@ app = FastAPI(
     lifespan=lifespan
 )
 
+# Add rate limiter
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+
 # Configure CORS
 
 app.add_middleware(
@@ -63,8 +75,9 @@ async def root():
     """Root endpoint."""
     return {
         "message": "Arabic Food Calorie Estimation API",
-        "version": "1.0.0",
-        "docs": "/docs"
+        "version": "2.0.0",
+        "docs": "/docs",
+        "architecture": "production"
     }
 
 
@@ -88,7 +101,6 @@ async def health():
         "database": db_status,
         "version": "2.0.0"
     }
-
 
 
 if __name__ == "__main__":
