@@ -1,8 +1,14 @@
 """Database connection and session management."""
 from typing import AsyncGenerator
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker
-from sqlalchemy.orm import declarative_base
+from sqlalchemy.orm import DeclarativeBase
 from app.config import settings
+
+
+class Base(DeclarativeBase):
+    """Base class for all models."""
+    pass
+
 
 # Create async engine
 engine = create_async_engine(
@@ -20,9 +26,6 @@ AsyncSessionLocal = async_sessionmaker(
     autocommit=False,
     autoflush=False,
 )
-
-# Base class for models
-Base = declarative_base()
 
 
 async def get_db() -> AsyncGenerator[AsyncSession, None]:
@@ -47,12 +50,14 @@ async def get_db() -> AsyncGenerator[AsyncSession, None]:
 
 async def init_db():
     """Initialize database - create all tables."""
+    from sqlalchemy import text
+    
     async with engine.begin() as conn:
         # Import all models to register them
         from app.models.database import Dish, USDAFood, ChatSession, ConversationHistory, MissingDish
         
         # Enable pgvector extension
-        await conn.execute("CREATE EXTENSION IF NOT EXISTS vector")
+        await conn.execute(text("CREATE EXTENSION IF NOT EXISTS vector"))
         
         # Create all tables
         await conn.run_sync(Base.metadata.create_all)
