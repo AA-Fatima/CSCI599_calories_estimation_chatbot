@@ -2,9 +2,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
+from loguru import logger
 
 from app.config import settings
-from app.data.data_loader import load_all_data
+from app.database import init_db, close_db
 from app.api.routes import chat, admin, countries
 
 
@@ -12,18 +13,33 @@ from app.api.routes import chat, admin, countries
 async def lifespan(app: FastAPI):
     """Application lifespan events."""
     # Startup
-    print("Starting up...")
-    load_all_data()
+    logger.info("Starting up...")
+    
+    # Initialize database (only creates tables if they don't exist)
+    try:
+        await init_db()
+        logger.success("Database connection established")
+    except Exception as e:
+        logger.error(f"Failed to initialize database: {e}")
+        logger.warning("Application will continue but database features may not work")
+    
+    # Load embedding service (lazy loaded on first use)
+    from app.services.embedding import embedding_service
+    logger.info("Embedding service ready (will load model on first use)")
+    
     yield
+    
     # Shutdown
-    print("Shutting down...")
+    logger.info("Shutting down...")
+    await close_db()
+    logger.info("Database connections closed")
 
 
 # Create FastAPI app
 app = FastAPI(
     title="Arabic Food Calorie Estimation API",
     description="AI-powered calorie estimation for Arabic/Middle Eastern cuisine",
-    version="1.0.0",
+    version="2.0.0",
     lifespan=lifespan
 )
 
@@ -55,7 +71,24 @@ async def root():
 @app.get("/health")
 async def health():
     """Health check endpoint."""
-    return {"status": "healthy"}
+    from app.database import engine
+    from sqlalchemy import text
+    
+    db_status = "unknown"
+    try:
+        async with engine.connect() as conn:
+            await conn.execute(text("SELECT 1"))
+        db_status = "healthy"
+    except Exception as e:
+        logger.error(f"Database health check failed: {e}")
+        db_status = "unhealthy"
+    
+    return {
+        "status": "healthy" if db_status == "healthy" else "degraded",
+        "database": db_status,
+        "version": "2.0.0"
+    }
+
 
 
 if __name__ == "__main__":
