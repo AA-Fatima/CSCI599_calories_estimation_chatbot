@@ -2,7 +2,7 @@
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.models.schemas import ChatRequest, ChatResponse
-from app.services.chat_service_new import chat_service_new
+from app.services.chat_service import chat_service
 from app.api.deps import get_database
 
 router = APIRouter(prefix="/chat", tags=["chat"])
@@ -24,7 +24,7 @@ async def send_message(
         Chat response with nutritional breakdown
     """
     try:
-        response = await chat_service_new.process_message(request, db)
+        response = await chat_service.process_message(request, db)
         return response
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

@@ -1,6 +1,6 @@
 """USDA foods repository with vector search."""
 from typing import Optional, Tuple, List, Dict
-from sqlalchemy import select, func
+from sqlalchemy import select, func, or_
 from sqlalchemy.ext.asyncio import AsyncSession
 from loguru import logger
 from app.models.database import USDAFood
@@ -18,13 +18,15 @@ class USDARepository:
         self,
         query_embedding: List[float],
         threshold: float = None,
+        min_threshold: float = 0.4,
     ) -> Optional[Tuple[USDAFood, float]]:
         """
-        Search for food using vector similarity.
+        Search for food using vector similarity with progressive threshold lowering.
         
         Args:
             query_embedding: Query vector embedding
-            threshold: Similarity threshold (default from config)
+            threshold: Initial similarity threshold (default from config)
+            min_threshold: Minimum threshold to try (will return best match even if below)
             
         Returns:
             Tuple of (food, similarity_score) or None
@@ -32,9 +34,9 @@ class USDARepository:
         if threshold is None:
             threshold = settings.similarity_threshold
         
-        logger.info("Searching USDA foods with vector similarity")
+        logger.info(f"Searching USDA foods with vector similarity (threshold: {threshold:.2f})")
         
-        # Build query with vector similarity
+        # Try with initial threshold first
         query = select(
             USDAFood,
             (1 - USDAFood.embedding.cosine_distance(query_embedding)).label('similarity')
@@ -52,7 +54,78 @@ class USDARepository:
             logger.info(f"Found USDA food: {food.description} (similarity: {similarity:.3f})")
             return food, float(similarity)
         
+        # If no match, try with lower threshold (get top result even if below threshold)
+        logger.info(f"No match at threshold {threshold:.2f}, trying lower threshold...")
+        query = select(
+            USDAFood,
+            (1 - USDAFood.embedding.cosine_distance(query_embedding)).label('similarity')
+        ).where(
+            (1 - USDAFood.embedding.cosine_distance(query_embedding)) >= min_threshold
+        ).order_by(
+            (1 - USDAFood.embedding.cosine_distance(query_embedding)).desc()
+        ).limit(1)
+        
+        result = await self.db.execute(query)
+        row = result.first()
+        
+        if row:
+            food, similarity = row
+            logger.info(f"Found USDA food (below initial threshold): {food.description} (similarity: {similarity:.3f})")
+            return food, float(similarity)
+        
+        # Last resort: get best match regardless of threshold
+        logger.info("Trying best match regardless of threshold...")
+        query = select(
+            USDAFood,
+            (1 - USDAFood.embedding.cosine_distance(query_embedding)).label('similarity')
+        ).order_by(
+            (1 - USDAFood.embedding.cosine_distance(query_embedding)).desc()
+        ).limit(1)
+        
+        result = await self.db.execute(query)
+        row = result.first()
+        
+        if row:
+            food, similarity = row
+            if similarity >= min_threshold:
+                logger.info(f"Found USDA food (best match): {food.description} (similarity: {similarity:.3f})")
+                return food, float(similarity)
+        
         logger.info("No USDA food match found")
+        return None
+    
+    async def search_with_fallback(
+        self,
+        query_text: str,
+        query_embedding: List[float],
+        threshold: float = None,
+    ) -> Optional[Tuple[USDAFood, float]]:
+        """
+        Search with vector similarity, falling back to text search if needed.
+        
+        Args:
+            query_text: Original query text for text-based fallback
+            query_embedding: Query vector embedding
+            threshold: Similarity threshold
+            
+        Returns:
+            Tuple of (food, similarity_score) or None
+        """
+        # Try vector search first
+        result = await self.search(query_embedding, threshold=threshold)
+        if result:
+            return result
+        
+        # Fallback to text search
+        logger.info(f"Vector search failed, trying text search for: {query_text}")
+        text_results = await self.search_by_text(query_text, limit=5)
+        
+        if text_results:
+            # Return the first text match with a reasonable similarity score
+            # We'll use 0.5 as a placeholder since we don't have vector similarity here
+            logger.info(f"Found via text search: {text_results[0].description}")
+            return text_results[0], 0.5
+        
         return None
     
     async def search_by_text(
@@ -72,6 +145,12 @@ class USDARepository:
         """
         search_lower = search_text.lower().strip()
         
+        # Clean up common prefixes
+        prefixes_to_remove = ["calories in", "calorie in", "cal in", "how many calories in"]
+        for prefix in prefixes_to_remove:
+            if search_lower.startswith(prefix):
+                search_lower = search_lower[len(prefix):].strip()
+        
         # Try exact match first
         query = select(USDAFood).where(
             USDAFood.description_lower == search_lower
@@ -89,7 +168,28 @@ class USDARepository:
             func.length(USDAFood.description)
         ).limit(limit)
         result = await self.db.execute(query)
-        return list(result.scalars().all())
+        starts_with_matches = list(result.scalars().all())
+        
+        if starts_with_matches:
+            return starts_with_matches
+        
+        # Try contains match (split search text into words)
+        words = [w.strip() for w in search_lower.split() if len(w.strip()) > 2]
+        if words:
+            # Build contains query - at least one word must match
+            conditions = [USDAFood.description_lower.like(f"%{word}%") for word in words]
+            query = select(USDAFood).where(
+                or_(*conditions)
+            ).order_by(
+                func.length(USDAFood.description)
+            ).limit(limit)
+            result = await self.db.execute(query)
+            contains_matches = list(result.scalars().all())
+            
+            if contains_matches:
+                return contains_matches
+        
+        return []
     
     async def get_by_fdc_id(self, fdc_id: int) -> Optional[USDAFood]:
         """

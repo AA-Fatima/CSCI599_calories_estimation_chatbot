@@ -10,7 +10,7 @@ from slowapi.errors import RateLimitExceeded
 from app.config import settings
 from app.database import init_db, close_db
 from app.api.routes import chat, countries
-from app.api.routes import admin_new as admin
+from app.api.routes import admin
 
 
 # Initialize rate limiter with configurable rate
@@ -59,7 +59,6 @@ app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 # Configure CORS
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.cors_origins_list,

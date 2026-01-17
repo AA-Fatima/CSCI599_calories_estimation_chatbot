@@ -1,0 +1,74 @@
+[
+  {
+    "query": "كم سعرة في الشاورما",
+    "expected_dish": "Shawarma",
+    "expected_calories": 350.0,
+    "expected_ingredients": [
+      {"name": "Chicken, broilers or fryers, breast, skinless, boneless, meat only, cooked, grilled", "weight_g": 150},
+      {"name": "Bread, pita, white, enriched", "weight_g": 60},
+      {"name": "Garlic, raw", "weight_g": 5}
+    ],
+    "country": "lebanon",
+    "difficulty": "common",
+    "language": "arabic"
+  },
+  {
+    "query": "how many calories in falafel",
+    "expected_dish": "Falafel",
+    "expected_calories": 333.0,
+    "expected_ingredients": [
+      {"name": "Chickpeas, mature seeds, cooked, boiled, without salt", "weight_g": 100},
+      {"name": "Onions, raw", "weight_g": 30},
+      {"name": "Parsley, fresh", "weight_g": 10},
+      {"name": "Oil, olive, salad or cooking", "weight_g": 15}
+    ],
+    "country": "lebanon",
+    "difficulty": "common",
+    "language": "english"
+  },
+  {
+    "query": "calories in hummus",
+    "expected_dish": "Hummus",
+    "expected_calories": 166.0,
+    "expected_ingredients": [
+      {"name": "Chickpeas, mature seeds, cooked, boiled, without salt", "weight_g": 100},
+      {"name": "Seeds, sesame butter, tahini", "weight_g": 15},
+      {"name": "Lemon juice, raw", "weight_g": 10},
+      {"name": "Garlic, raw", "weight_g": 3}
+    ],
+    "country": "lebanon",
+    "difficulty": "common",
+    "language": "english"
+  },
+  {
+    "query": "tabbouleh calories",
+    "expected_dish": "Tabbouleh",
+    "expected_calories": 45.0,
+    "expected_ingredients": [
+      {"name": "Parsley, fresh", "weight_g": 50},
+      {"name": "Tomatoes, raw", "weight_g": 30},
+      {"name": "Onions, raw", "weight_g": 10},
+      {"name": "Bulgur, cooked", "weight_g": 20},
+      {"name": "Lemon juice, raw", "weight_g": 10},
+      {"name": "Oil, olive, salad or cooking", "weight_g": 5}
+    ],
+    "country": "lebanon",
+    "difficulty": "common",
+    "language": "english"
+  },
+  {
+    "query": "koshari calories",
+    "expected_dish": "Koshari",
+    "expected_calories": 450.0,
+    "expected_ingredients": [
+      {"name": "Rice, white, long-grain, regular, enriched, cooked", "weight_g": 150},
+      {"name": "Lentils, mature seeds, cooked, boiled, without salt", "weight_g": 100},
+      {"name": "Macaroni, cooked, enriched", "weight_g": 100},
+      {"name": "Onions, raw", "weight_g": 50},
+      {"name": "Tomatoes, red, ripe, raw, year round average", "weight_g": 50}
+    ],
+    "country": "egypt",
+    "difficulty": "common",
+    "language": "english"
+  }
+]
