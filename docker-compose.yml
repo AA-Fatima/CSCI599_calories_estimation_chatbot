@@ -1,28 +1,22 @@
 version: '3.8'
 
 services:
-  backend:
-    build: ./backend
-    ports:
-      - "8000:8000"
+  postgres:
+    image:  pgvector/pgvector:pg16
+    container_name: nutriarab-postgres
     environment:
-      - OPENAI_API_KEY=${OPENAI_API_KEY}
-      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY}
-      - CORS_ORIGINS=http://localhost:4200,http://localhost
-    volumes:
-      - ./backend/data:/app/data
-    networks:
-      - app-network
-
-  frontend:
-    build: ./frontend
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nutriarab
     ports:
-      - "4200:80"
-    depends_on:
-      - backend
-    networks:
-      - app-network
+      - "5432:5432"
+    volumes: 
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval:  5s
+      timeout:  5s
+      retries: 5
 
-networks:
-  app-network:
-    driver: bridge
+volumes:
+  postgres_data: 

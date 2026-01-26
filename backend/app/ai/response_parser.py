@@ -1,5 +1,6 @@
 """Parse AI responses to structured data."""
 from typing import Optional
+from loguru import logger
 from app.models.schemas import GPTAnalysisResponse
 
 
@@ -35,5 +36,5 @@ def parse_gpt_response(raw_response: str) -> Optional[GPTAnalysisResponse]:
         return GPTAnalysisResponse(**data)
         
     except Exception as e:
-        print(f"Error parsing GPT response: {e}")
+        logger.error(f"Error parsing GPT response: {e}")
         return None

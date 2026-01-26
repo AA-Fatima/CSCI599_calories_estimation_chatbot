@@ -1,6 +1,7 @@
 """DeepSeek API client."""
 import json
 from typing import Optional
+from loguru import logger
 import httpx
 from app.config import settings
 from app.models.schemas import GPTAnalysisResponse, NutritionTotals
@@ -47,7 +48,7 @@ class DeepSeekClient:
                 )
                 
                 if response.status_code != 200:
-                    print(f"DeepSeek API error: {response.status_code}")
+                    logger.error(f"DeepSeek API error: {response.status_code}")
                     return None
                 
                 data = response.json()
@@ -67,7 +68,7 @@ class DeepSeekClient:
                 return GPTAnalysisResponse(**parsed_data)
                 
         except Exception as e:
-            print(f"DeepSeek API error: {e}")
+            logger.error(f"DeepSeek API error: {e}")
             return None
     
     def estimate_calories(self, prompt: str) -> Optional[NutritionTotals]:
@@ -103,7 +104,7 @@ class DeepSeekClient:
                 )
                 
                 if response.status_code != 200:
-                    print(f"DeepSeek calorie estimation error: {response.status_code}")
+                    logger.error(f"DeepSeek calorie estimation error: {response.status_code}")
                     return None
                 
                 data = response.json()
@@ -123,7 +124,7 @@ class DeepSeekClient:
                 return NutritionTotals(**parsed_data)
                 
         except Exception as e:
-            print(f"DeepSeek calorie estimation error: {e}")
+            logger.error(f"DeepSeek calorie estimation error: {e}")
             return None
 
 

@@ -44,6 +44,7 @@ export class AdminComponent implements OnInit {
   editorLoading = false;
   isEditMode = false;
   editingDishId: number | null = null;
+  editingMissingDish: MissingDish | null = null;  // Track which missing dish we're editing
 
   constructor(
     private adminService: AdminService,
@@ -256,6 +257,7 @@ export class AdminComponent implements OnInit {
     this.editorLoading = true;
     this.isEditMode = false;
     this.editingDishId = null;
+    this.editingMissingDish = dish;  // Store the missing dish we're editing
     
     const searches = dish.ingredients.map(ing => 
       this.adminService.searchUSDA(ing.name)
@@ -313,6 +315,7 @@ export class AdminComponent implements OnInit {
     this.dishToEdit = null;
     this.isEditMode = false;
     this.editingDishId = null;
+    this.editingMissingDish = null;
   }
 
   // ==========================================
@@ -327,26 +330,38 @@ export class AdminComponent implements OnInit {
       ingredients: dish.ingredients
     };
 
-    this.adminService.createDish(dishCreate).subscribe({
-      next: () => {
-        alert('✅ Dish saved successfully!');
-        
-        // Remove from missing dishes list if it was from there
-        this.missingDishes = this.missingDishes.filter(
-          d => !(d.dish_name.toLowerCase() === dish.dish_name.toLowerCase() && 
-                 d.country.toLowerCase() === dish.country.toLowerCase())
-        );
-        
-        this.closeEditor();
-        this.loadStats();
-        this.loadAllDishes();
-        this.loadMissingDishes();
-      },
-      error:  (error) => {
-        console.error('Error saving dish:', error);
-        alert(`❌ Error:  ${error.error?.detail || 'Failed to save dish'}`);
-      }
-    });
+    // If saving from a missing dish, use addMissingDishToDatabase to update status
+    if (this.editingMissingDish) {
+      // Pass the edited dish data to the endpoint
+      this.adminService.addMissingDishToDatabase(dish.dish_name, dish.country, dishCreate).subscribe({
+        next: () => {
+          alert('✅ Dish added to database successfully!');
+          this.closeEditor();
+          this.loadStats();
+          this.loadAllDishes();
+          this.loadMissingDishes();  // This will refresh and filter out "added" dishes
+        },
+        error: (error) => {
+          console.error('Error adding dish to database:', error);
+          alert(`❌ Error: ${error.error?.detail || 'Failed to add dish to database'}`);
+        }
+      });
+    } else {
+      // Regular dish creation
+      this.adminService.createDish(dishCreate).subscribe({
+        next: () => {
+          alert('✅ Dish saved successfully!');
+          this.closeEditor();
+          this.loadStats();
+          this.loadAllDishes();
+          this.loadMissingDishes();
+        },
+        error:  (error) => {
+          console.error('Error saving dish:', error);
+          alert(`❌ Error:  ${error.error?.detail || 'Failed to save dish'}`);
+        }
+      });
+    }
   }
 
   updateDish(dish:  EditableDish): void {

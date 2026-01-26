@@ -12,6 +12,7 @@ export interface AdminStats {
 }
 
 export interface MissingDish {
+  id?: number;
   dish_name: string;
   dish_name_arabic:  string | null;
   country: string;
@@ -24,6 +25,7 @@ export interface MissingDish {
   query_count: number;
   first_queried: string;
   last_queried: string;
+  status?: string;
 }
 
 export interface MissingDishesResponse {
@@ -102,11 +104,13 @@ export class AdminService {
     });
   }
 
-  addMissingDishToDatabase(dishName: string, country: string): Observable<any> {
+  addMissingDishToDatabase(dishName: string, country: string, dishData?: DishCreate): Observable<any> {
     const params = new HttpParams().set('country', country);
+    // Send dish data in body if provided, otherwise send empty object
+    const body = dishData ? dishData : {};
     return this.http.post(
       `${this.apiUrl}/missing-dishes/${encodeURIComponent(dishName)}/add-to-database`,
-      null,
+      body,
       {
         params,
         headers: this.getHeaders()
@@ -115,9 +119,11 @@ export class AdminService {
   }
 
   deleteMissingDish(dishName: string, country: string): Observable<any> {
-    const params = new HttpParams().set('country', country);
+    const params = new HttpParams()
+      .set('dish_name', dishName)
+      .set('country', country);
     return this.http.delete(
-      `${this.apiUrl}/missing-dishes/${encodeURIComponent(dishName)}`,
+      `${this.apiUrl}/missing-dishes/by-name`,
       {
         params,
         headers: this.getHeaders()

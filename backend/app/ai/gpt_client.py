@@ -1,6 +1,7 @@
 """OpenAI GPT client."""
 import json
 from typing import Optional
+from loguru import logger
 from openai import OpenAI
 from app.config import settings
 from app.models.schemas import GPTAnalysisResponse, NutritionTotals
@@ -53,7 +54,7 @@ class GPTClient:
             return GPTAnalysisResponse(**data)
             
         except Exception as e:
-            print(f"GPT API error: {e}")
+            logger.error(f"GPT API error: {e}")
             return None
     
     def estimate_calories(self, prompt: str) -> Optional[NutritionTotals]:
@@ -96,7 +97,7 @@ class GPTClient:
             return NutritionTotals(**data)
             
         except Exception as e:
-            print(f"GPT calorie estimation error: {e}")
+            logger.error(f"GPT calorie estimation error: {e}")
             return None
 
 
